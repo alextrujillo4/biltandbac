@@ -14,6 +14,12 @@ $typoOptions: headline, body-1, body-2, title, caption, overline;
         }
 }
 
+.theme--light.v-divider {
+        border-image: linear-gradient(45deg, rgba(49,89,108,1) 0%, rgba(98,177,216,1) 100%);
+        border-width: 170px 3px 0 3px;
+        border-style: solid;
+}
+
 $body-font-family-title: 'Montserrat', serif;
 $typoHeadOptions:display-4, display-3,display-1,display-2, headline, subtitle-1, subtitle-2;
 #app {

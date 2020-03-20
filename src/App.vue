@@ -113,7 +113,7 @@
 <script>
 import HelloWorld from './components/HelloWorld';
 import Paralax from './components/Paralax';
-import Home from './components/Home';
+import Home from './components/Nosotros';
 import Seguros from './components/Seguros';
 import Beneficios from './components/Beneficios';
 

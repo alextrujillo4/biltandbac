@@ -2,35 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="161d7063-4807-4502-bcca-c7a9d5ae132e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Nosotros.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/memory-fs/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/memory-fs/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/memory-fs/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/memory-fs/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/memory-fs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/memory-fs/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/memory-fs/lib/MemoryFileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/memory-fs/lib/MemoryFileSystem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/memory-fs/lib/join.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/memory-fs/lib/join.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/memory-fs/lib/normalize.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/memory-fs/lib/normalize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/memory-fs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/memory-fs/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/memory-fs/test/MemoryFileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/memory-fs/test/MemoryFileSystem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/tapable/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/tapable/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/tapable/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/tapable/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/tapable/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/tapable/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/tapable/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/tapable/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/tapable/lib/Tapable.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/tapable/lib/Tapable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/tapable/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/tapable/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/tapable/test/applyPluginsParallelBailResultTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/eslint-import-resolver-webpack/node_modules/tapable/test/applyPluginsParallelBailResultTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fibers/build/config.gypi" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fibers/build/config.gypi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/build/Release/fse.node" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/build/Release/fse.node" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Paralax.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Paralax.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,5 +121,16 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="305" y="185" key="run.anything.popup/0.23.1280.709@0.23.1280.709" timestamp="1584380018539" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Nosotros.vue</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
