@@ -1,122 +1,233 @@
 <template>
-  <v-container>
-    <v-row
-      align="center"
-      justify="center"
-    >
-      <v-col
-        class="text-center"
-        cols="8"
-      >
-        <h1 class="display-style">
-          ¿Por qué elegirnos?
-        </h1>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="6">
-        <v-card
-          class="pa-1"
-          tile
+    <v-container>
+        <v-row
+                align="center"
+                justify="center"
         >
-          <div>
-            <v-card-title class="display-style2">
-              Sobre Nosotros
-            </v-card-title>
-            <v-card-subtitle class="display-style3">
-              Listen to your favorite artists and albums whenever and wherever, online and offline.
-            </v-card-subtitle>
-          </div>
-        </v-card>
-      </v-col>
-      <v-col cols="6">
-        <v-card
-          class="pa-1"
-          tile
-        >
-          <div>
-            <v-card-title class="display-style2">
-              Sobre Nosotros
-            </v-card-title>
-            <v-card-subtitle class="display-style3">
-              Listen to your favorite artists and albums whenever and wherever, online and offline.
-            </v-card-subtitle>
-          </div>
-        </v-card>
-      </v-col>
-      <v-col cols="6">
-        <v-card
-          class="pa-1"
-          tile
-        >
-          <div>
-            <v-card-title class="display-style2">
-              Sobre Nosotros
-            </v-card-title>
-            <v-card-subtitle class="display-style3">
-              Listen to your favorite artists and albums whenever and wherever, online and offline.
-            </v-card-subtitle>
-          </div>
-        </v-card>
-      </v-col>
-      <v-col cols="6">
-        <v-card
-          class="pa-1"
-          tile
-        >
-          <div>
-            <v-card-title class="display-style2">
-              Sobre Nosotros
-            </v-card-title>
-            <v-card-subtitle class="display-style3">
-              Listen to your favorite artists and albums whenever and wherever, online and offline.
-            </v-card-subtitle>
-          </div>
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+            <v-col
+                    class="text-center"
+                    cols="8"
+            >
+                <h1 class="display-1 active-color ma-8">
+                    ¿Por qué Nosotros?
+                </h1>
+            </v-col>
+        </v-row>
+        <v-row>
+            <v-col
+            cols="12"
+                  lg="6"
+                  md="12"
+                  sm="12"
+                  xl="6">
+                <v-card
+                        elevation="6"
+                        class="pa-6"
+                        tile
+                >
+                    <v-layout justify-center fill-height>
+                        <v-divider
+                                vertical
+                        />
+                        <div>
+                            <v-card-title class="headline ma-2 active-color">
+                                <v-icon
+                                        large
+                                        left
+                                        color="primary"
+                                >
+                                    mdi-earth
+                                </v-icon>
+                                Precios competitivos
+                            </v-card-title>
+                            <v-card-subtitle class="body-1 ma-2">
+                                Desarrollamos planes de seguros actualizados y competitivos en el mercado mundial.
+                            </v-card-subtitle>
+                        </div>
+                    </v-layout>
+                </v-card>
+            </v-col>
+            <v-col
+            cols="12"
+                  lg="6"
+                  md="12"
+                  sm="12"
+                  xl="6">
+                <v-card
+                        elevation="6"
+                        class="pa-6"
+                        tile
+                >
+                    <v-layout justify-center fill-height>
+                        <v-divider
+                                vertical
+                        />
+                        <div>
+                            <v-card-title class="headline ma-2 active-color">
+                                <v-icon
+                                        large
+                                        left
+                                        color="primary"
+                                >
+                                    mdi-sale
+                                </v-icon>
+                                Tarifas Atractivas
+                            </v-card-title>
+                            <v-card-subtitle class="body-1 ma-2">
+                                Ofrecemos tarifas atractivas y descuentos adicionales en los seguros de autos
+                            </v-card-subtitle>
+                        </div>
+                    </v-layout>
+                </v-card>
+            </v-col>
+        </v-row>
+        <v-row>
+            <v-col
+            cols="12"
+                  lg="6"
+                  md="12"
+                  sm="12"
+                  xl="6">
+                <v-card
+                        elevation="6"
+                        class="pa-6"
+                        tile
+                >
+                    <v-layout justify-center fill-height>
+                        <v-divider
+                                vertical
+                        />
+                        <div>
+                            <v-card-title class="headline ma-2 active-color">
+                                <v-icon
+                                        large
+                                        left
+                                        color="primary"
+                                >
+                                   mdi-home-heart
+                                </v-icon>
+                                Nos preocupamos por ti
+                            </v-card-title>
+                            <v-card-subtitle class="body-1 ma-2">
+                                Planes de alta profección y rendimiento para
+                                a mantener la calidad de vida y estabilidad en las familias.
+                            </v-card-subtitle>
+                        </div>
+                    </v-layout>
+                </v-card>
+            </v-col>
+            <v-col
+            cols="12"
+                  lg="6"
+                  md="12"
+                  sm="12"
+                  xl="6">
+                <v-card
+                        elevation="6"
+                        class="pa-6"
+                        tile
+                >
+                    <v-layout justify-center fill-height>
+                        <v-divider
+                                vertical
+                        />
+                        <div>
+                            <v-card-title class="headline ma-2 active-color">
+                                <v-icon
+                                        large
+                                        left
+                                        color="primary"
+                                >
+                                    mdi-robot
+                                </v-icon>
+                                Nuevas tecnologías
+                            </v-card-title>
+                            <v-card-subtitle class="body-1 ma-2">
+                                Uso de nuevas tecnologías para mantener una
+                                eficaz red de información y comunicación.
+                            </v-card-subtitle>
+                        </div>
+                    </v-layout>
+                </v-card>
+            </v-col>
+        </v-row>
+        <v-row>
+            <v-col
+            cols="12"
+                  lg="6"
+                  md="12"
+                  sm="12"
+                  xl="6">
+                <v-card
+                        elevation="6"
+                        class="pa-6"
+                        tile
+                >
+                    <v-layout justify-center fill-height>
+                        <v-divider
+                                vertical
+                        />
+                        <div>
+                            <v-card-title class="headline ma-2 active-color">
+                                <v-icon
+                                        large
+                                        left
+                                        color="primary"
+                                >
+                                    mdi-graphql
+                                </v-icon>
+                            Efectividad
+                        </v-card-title>
+                        <v-card-subtitle class="body-1 ma-2">
+                            Planes efectivos con alta protección y alto rendimiento que ayudan a mantener la calidad
+                            de vida y estabilidad en las familias.
+                        </v-card-subtitle>
+                    </div>
+                    </v-layout>
+                </v-card>
+            </v-col>
+            <v-col
+            cols="12"
+                  lg="6"
+                  md="12"
+                  sm="12"
+                  xl="6">
+                <v-card
+                        elevation="6"
+                        class="pa-6"
+                        tile
+                >
+                    <v-layout justify-center fill-height>
+                        <v-divider
+                                vertical
+                        />
+                        <div>
+                            <v-card-title class="headline ma-2 active-color">
+                                <v-icon
+                                        large
+                                        left
+                                        color="primary"
+                                >
+                                    mdi-ear-hearing
+                                </v-icon>
+                                Te escuchamos
+                            </v-card-title>
+                            <v-card-subtitle class="body-1 ma-2">
+                                Tenemos la habilidad de detectar las necesidades primordiales
+                                del cliente para ofrecerle el seguro que más le beneficie.
+                            </v-card-subtitle>
+                        </div>
+                    </v-layout>
+                </v-card>
+            </v-col>
+        </v-row>
+    </v-container>
 </template>
 
-<style scoped>
-    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Poppins:400,500,600,700&display=swap');
-    .btn {
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 600;
-        border-radius: 8px
-
+<style lang="scss">
+    @import './src/styles/variables.scss';
+    .active-color {
+        color: #002554 ;
     }
 
-    .display-style {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 32px;
-        color: #002554;
-        margin: 40px;
-    }
-    .display-style2 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 40px;
-        color: #002554;
-        margin: 16px;
-    }
-
-    .display-style3 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 16px;
-        color: #002554;
-        margin: 16px;
-    }
-    .theme--light.v-divider {
-        border-width: 3px 3px 3px 3px;
-        border-image: linear-gradient(45deg, rgba(49,89,108,1) 0%, rgba(98,177,216,1) 100%);
-        border-image-slice: 9;
-        border-style: solid;
-    }
 </style>

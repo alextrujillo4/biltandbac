@@ -18,6 +18,7 @@
               tile
               large
               color="accent"
+              style="border-radius: 8px;"
             >
               Cotizar
             </v-btn>
@@ -25,6 +26,8 @@
               tile
               large
               color="#ffffff"
+                   style="border-radius: 8px;"
+
             >
               <v-icon left>
                 mdi-play-circle

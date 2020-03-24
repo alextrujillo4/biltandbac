@@ -1,8 +1,10 @@
 <template>
   <v-container
     fluid
-    style="background: linear-gradient(45deg , #161931, #193C65, #1C5F99);"
+    style="padding-top:56px; padding-bottom: 56px; background: linear-gradient(45deg , #161931, #193C65, #1C5F99);"
   >
+    <v-layout row wrap align-center >
+
     <v-row
       align="center"
       justify="center"
@@ -11,7 +13,7 @@
         class="text-center"
         cols="8"
       >
-        <h1 class="display-style">
+        <h1 class="display-1" style="color: white">
           Seguros diseñados para brindarte el mejor servicio y cobertura
         </h1>
       </v-col>
@@ -28,111 +30,142 @@
         md="6"
         sm="6"
       >
-        <v-icon x-large>
-          mdi-pencil
-        </v-icon>
-        <h1 class="display-1 font-weight-medium ">
-          Te ayudamos a construir tu futuro y cuidamos de ti en tu trayecto
-        </h1>
-        <v-btn
-          class="ma-2 btn"
-          tile
-          large
-          color="accent"
-        >
-          Cotizar
-        </v-btn>
+        <v-hover
+                v-slot:default="{ hover }"
+                open-delay="200">
+          <v-card class="ma-6"
+                  :color='hover ? "rgb(255, 255, 255, 1)" : "rgb(0, 0, 0, 0)"'
+                  :elevation="hover ? 16 : 0"
+          >
+            <v-icon :color='hover ? "light-blue darken-4" : "accent"' class="ma-4" x-large>
+              mdi-car
+            </v-icon>
+            <h1 :class='hover ? "headline ma-2 hover-active" : "headline  ma-2 local-white"'>
+              Seguro de Autos individuales
+            </h1>
+            <p :class='hover ? "text-start body-2  ma-4 hover-active" : " text-start body-2  ma-4 local-white "'>
+              Este seguro tiene por objeto, reparar o indemnizar
+              los daños accidentales producidos en los vehículo
+              de terceros y en el vehículo asegurado.
+              <br><br><br>
+            </p>
+          </v-card>
+        </v-hover>
+        <v-btn class="ma-2 btn"
+               large
+               color="accent" >Cotizar</v-btn>
+
       </v-col>
       <v-col
-        class="text-center"
-        cols="12"
-        xl="3"
-        lg="3"
-        md="6"
-        sm="6"
+              class="text-center"
+              cols="12"
+              xl="3"
+              lg="3"
+              md="6"
+              sm="6"
       >
-        <v-icon x-large>
-          mdi-pencil
-        </v-icon>
-        <h1 class="display-1 font-weight-medium ">
-          Te ayudamos a construir tu futuro y cuidamos de ti en tu trayecto
-        </h1>
-        <v-btn
-          class="ma-2 btn"
-          tile
-          large
-          color="accent"
-        >
-          Cotizar
-        </v-btn>
+        <v-hover
+                v-slot:default="{ hover }"
+                open-delay="200">
+          <v-card class="ma-6"
+                  :color='hover ? "rgb(255, 255, 255, 1)" : "rgb(0, 0, 0, 0)"'
+                  :elevation="hover ? 16 : 0"
+          >
+            <v-icon :color='hover ? "light-blue darken-4" : "accent"' class="ma-4" x-large>
+              mdi-hospital-building
+            </v-icon>
+            <h1 :class='hover ? "headline ma-2 hover-active" : "headline  ma-2 local-white"'>
+              Seguros Gastos Médicos Mayores
+            </h1>
+            <p :class='hover ? "text-start body-2  ma-4 hover-active" : " text-start body-2  ma-4 local-white "'>
+              Te ofrecemos los servicios de
+              profesionales y hospitales con
+              estándares de calidad, así
+              como protección integral en
+              México y en el extranjero.
+              <br><br><br>
+            </p>
+          </v-card>
+        </v-hover>
+        <v-btn class="ma-2 btn"
+               large
+               color="accent" >Cotizar</v-btn>
+
       </v-col>
       <v-col
-        class="text-center"
-        cols="12"
-        xl="3"
-        lg="3"
-        md="6"
-        sm="6"
+              class="text-center"
+              cols="12"
+              xl="3"
+              lg="3"
+              md="6"
+              sm="6"
       >
-        <v-icon x-large>
-          mdi-pencil
-        </v-icon>
-        <h1 class="display-1 font-weight-medium ">
-          Te ayudamos a construir tu futuro y cuidamos de ti en tu trayecto
-        </h1>
-        <v-btn
-          class="ma-2 btn"
-          tile
-          large
-          color="accent"
-        >
-          Cotizar
-        </v-btn>
+        <v-hover
+                v-slot:default="{ hover }"
+                open-delay="200">
+          <v-card
+                  class="ma-6"
+                  :color='hover ? "rgb(255, 255, 255, 1)" : "rgb(0, 0, 0, 0)"'
+                  :elevation="hover ? 16 : 0"
+          >
+            <v-icon :color='hover ? "light-blue darken-4" : "accent"' class="ma-4" x-large>
+              mdi-shield-account
+            </v-icon>
+            <h1 :class='hover ? "headline ma-4 black--text" : "headline  ma-4 local-white"'>
+              Seguros de Vida
+            </h1>
+            <p :class='hover ? "text-start body-2  ma-4 hover-active" : " text-start body-2  ma-4 local-white "'>
+              Te ofrecemos una solución financiera y patrimonial
+              adecuada a las necesidades personales y empresiarales
+              a lo largo de tu vida.
+              <br><br><br>
+            </p>
+          </v-card>
+        </v-hover>
+        <v-btn class="ma-2 btn"
+                large
+                color="accent" >Cotizar</v-btn>
       </v-col>
-      <v-col
-        class="text-center"
-        cols="12"
-        xl="3"
-        lg="3"
-        md="6"
-        sm="6"
-      >
-        <v-icon x-large>
-          mdi-pencil
-        </v-icon>
-        <h1 class="display-1 font-weight-medium ">
-          Te ayudamos a construir tu futuro y cuidamos de ti en tu trayecto
-        </h1>
-        <v-btn
-          class="ma-2 btn"
-          tile
-          large
-          color="accent"
-        >
-          Cotizar
-        </v-btn>
+      <v-col class="text-center"
+              cols="12"
+              xl="3"
+              lg="3"
+              md="6"
+              sm="6">
+        <v-hover
+                v-slot:default="{ hover }"
+                open-delay="200">
+            <v-card class="ma-6"
+                    :color='hover ? "rgb(255, 255, 255, 1)" : "rgb(0, 0, 0, 0)"'
+                    :elevation="hover ? 16 : 0"
+                    >
+            <v-icon :color='hover ? "light-blue darken-4" : "accent"' class="ma-4" x-large>
+              mdi-domain
+            </v-icon>
+            <h1 :class='hover ? "headline ma-2 hover-active" : "headline  ma-2 local-white"'>
+              Seguros contra daños
+            </h1>
+            <p :class='hover ? "text-start body-2  ma-4 hover-active" : " text-start body-2  ma-4 local-white "'>
+              Es un seguro que protege el patrimonio de tu empresa
+              y/o casa, contra incendio, daños por terremotos y riesgos
+              hidrometeorológicos, robo, violencia y/o asalto.
+              <br><br><br>
+            </p>
+            </v-card>
+        </v-hover>
+        <v-btn class="ma-2 btn"
+               large
+               color="accent" >Cotizar</v-btn>
       </v-col>
     </v-row>
+    </v-layout>
   </v-container>
 </template>
 
-<style scoped>
-    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Poppins:400,500,600,700&display=swap');
-    .btn {
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 600;
-        border-radius: 8px
+<style lang="scss">
+  @import './src/styles/variables.scss';
+  .hover-active {
+    color: #454545 ;
+  }
 
-    }
-    .display-style {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 36px;
-        font-weight: 700;
-        margin-left: 40px;
-        margin-right: 40px;
-        line-height: 40px;
-        color: white;
-        margin: 40px;
-    }
 </style>

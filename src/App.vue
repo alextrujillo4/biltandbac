@@ -111,7 +111,7 @@
 </style>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import HelloWorld from './components/Companies';
 import Paralax from './components/Paralax';
 import Home from './components/Nosotros';
 import Seguros from './components/Seguros';
