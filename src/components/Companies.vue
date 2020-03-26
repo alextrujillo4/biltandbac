@@ -1,85 +1,187 @@
 <template>
   <v-container>
-    <v-row
-            align="center"
-            justify="center"
-    >
-      <v-col
-              class="text-center"
-              cols="8"
-      >
-        <h1 class="display-1 active-color ma-8">
+    <v-row align="center"
+            justify="center">
+      <v-col class="text-center"
+              cols="12">
+        <h1 class="display-1 active-color ma-4">
           Aseguradoras con las que trabajamos
         </h1>
       </v-col>
     </v-row>
     <v-row>
       <v-col
-              cols="12"
-              lg="6"
-              md="12"
-              sm="12"
-              xl="6">
-        <v-card
-                elevation="6"
-                class="pa-6"
-                tile
-        >
-          <v-layout justify-center fill-height>
-            <v-divider
-                    vertical
-            />
-            <div>
-              <v-card-title class="headline ma-2 active-color">
-                <v-icon
-                        large
-                        left
-                        color="primary"
-                >
-                  mdi-earth
-                </v-icon>
-                Precios competitivos
-              </v-card-title>
-              <v-card-subtitle class="body-1 ma-2">
-                Desarrollamos planes de seguros actualizados y competitivos en el mercado mundial.
-              </v-card-subtitle>
-            </div>
-          </v-layout>
-        </v-card>
+              cols="6"
+              lg="2"
+              xl="2"
+              md="4"
+              sm="6">
+        <v-img
+                src="../assets/companies/Atlas.png"
+                aspect-ratio="1"
+        class="ma-4"/>
       </v-col>
       <v-col
-              cols="12"
-              lg="6"
-              md="12"
-              sm="12"
-              xl="6">
-        <v-card
-                elevation="6"
-                class="pa-6"
-                tile
-        >
-          <v-layout justify-center fill-height>
-            <v-divider
-                    vertical
-            />
-            <div>
-              <v-card-title class="headline ma-2 active-color">
-                <v-icon
-                        large
-                        left
-                        color="primary"
-                >
-                  mdi-sale
-                </v-icon>
-                Tarifas Atractivas
-              </v-card-title>
-              <v-card-subtitle class="body-1 ma-2">
-                Ofrecemos tarifas atractivas y descuentos adicionales en los seguros de autos
-              </v-card-subtitle>
-            </div>
-          </v-layout>
-        </v-card>
+              cols="6"
+              lg="2"
+              xl="2"
+              md="4"
+              sm="6">
+        <v-img
+                src="../assets/companies/GNP.png"
+                aspect-ratio="1"
+        class="ma-4"/>
       </v-col>
+      <v-col
+              cols="6"
+              lg="2"
+              xl="2"
+              md="4"
+              sm="6">
+        <v-img
+                src="../assets/companies/Afirme.png"
+                aspect-ratio="1"
+        class="ma-4"/>
+      </v-col>
+      <v-col
+              cols="6"
+              lg="2"
+              xl="2"
+              md="4"
+              sm="6">
+        <v-img
+                src="../assets/companies/Mapfre.png"
+                aspect-ratio="1"
+        class="ma-4"/>
+      </v-col>
+      <v-col
+              cols="6"
+              lg="2"
+              xl="2"
+              md="4"
+              sm="6">
+        <v-img
+                src="../assets/companies/AXA.png"
+                aspect-ratio="1"
+        class="ma-4"/>
+      </v-col>
+      <v-col
+              cols="6"
+              lg="2"
+              xl="2"
+              md="4"
+              sm="6">
+        <v-img
+                src="../assets/companies/Bupa.png"
+                aspect-ratio="1"
+        class="ma-4"/>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col
+              cols="6"
+              lg="2"
+              xl="2"
+              md="4"
+              sm="6">
+        <v-img
+                src="../assets/companies/Prudential.png"
+                aspect-ratio="1"
+                class="ma-4"/>
+      </v-col>
+      <v-col
+              cols="6"
+              lg="2"
+              xl="2"
+              md="4"
+              sm="6">
+        <v-img
+                src="../assets/companies/Qualitas.png"
+                aspect-ratio="1"
+                class="ma-4"/>
+      </v-col>
+      <v-col
+              cols="6"
+              lg="2"
+              xl="2"
+              md="4"
+              sm="6">
+        <v-img
+                src="../assets/companies/Afirme.png"
+                aspect-ratio="1"
+                class="ma-4"/>
+      </v-col>
+      <v-col
+              cols="6"
+              lg="2"
+              xl="2"
+              md="4"
+              sm="6">
+        <v-img
+                src="../assets/companies/BX+.png"
+                aspect-ratio="1"
+                class="ma-4"/>
+      </v-col>
+      <v-col
+              cols="6"
+              lg="2"
+              xl="2"
+              md="4"
+              sm="6">
+        <v-img
+                src="../assets/companies/Metlife.png"
+                aspect-ratio="1"
+                class="ma-4"/>
+      </v-col>
+      <v-col
+              cols="6"
+              lg="2"
+              xl="2"
+              md="4"
+              sm="6">
+        <v-img
+                src="../assets/companies/CHUBB.png"
+                aspect-ratio="1"
+                class="ma-4"/>
+      </v-col>
+      <v-row
+              align="center"
+              justify="center">
+        <v-col
+                cols="6"
+                lg="2"
+                xl="2"
+                md="4"
+                sm="6">
+          <v-img
+                  src="../assets/companies/HDIseguros.png"
+                  aspect-ratio="1"
+                  class="ma-4"/>
+        </v-col>
+        <v-col
+                cols="6"
+                lg="2"
+                xl="2"
+                md="4"
+                sm="6">
+          <v-img
+                  src="../assets/companies/PrimeroSeguros.png"
+                  aspect-ratio="1"
+                  class="ma-4"/>
+        </v-col>
+        <v-col
+                cols="6"
+                lg="2"
+                xl="2"
+                md="4"
+                sm="6">
+          <v-img
+                  src="../assets/companies/BanorteSeguros.png"
+                  aspect-ratio="1"
+                  class="ma-4"/>
+        </v-col>
+
+      </v-row>
     </v-row>
   </v-container>
 </template>

@@ -2,12 +2,10 @@
   <v-container>
     <v-row
       align="center"
-      justify="center"
-    >
+      justify="center">
       <v-col
         class="text-center"
-        cols="8"
-      >
+        cols="8">
         <h1 class="display-1 font-weight-medium ">
           ¿Por qué nosotros?
         </h1>

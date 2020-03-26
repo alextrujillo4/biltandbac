@@ -92,6 +92,7 @@
       <Seguros />
       <Beneficios />
       <HelloWorld />
+      <CotizarAhora/>
     </v-content>
   </v-app>
 </template>
@@ -116,6 +117,7 @@ import Paralax from './components/Paralax';
 import Home from './components/Nosotros';
 import Seguros from './components/Seguros';
 import Beneficios from './components/Beneficios';
+import CotizarAhora from './components/CotizarAhora'
 
 export default {
   name: 'App',
@@ -125,7 +127,8 @@ export default {
     Paralax,
     Home,
     Seguros,
-    Beneficios
+    Beneficios,
+    CotizarAhora
   },
 
   data: () => ({
