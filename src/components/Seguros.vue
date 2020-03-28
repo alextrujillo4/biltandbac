@@ -1,27 +1,17 @@
+
 <template>
   <v-container
-    fluid
-    style="padding-top:56px; padding-bottom: 56px; background: linear-gradient(45deg , #161931, #193C65, #1C5F99);"
-  >
-    <v-layout row wrap align-center >
-
-    <v-row
-      align="center"
-      justify="center"
-    >
+        fluid
+        style="padding-top:56px; padding-bottom: 56px; background: linear-gradient(45deg , #161931, #193C65, #1C5F99);">
+  <v-row row wrap align-center>
       <v-col
         class="text-center"
-        cols="8"
-      >
-        <h1 class="display-1" style="color: white">
-          Seguros diseñados para brindarte el mejor servicio y cobertura
-        </h1>
+        cols="12">
+          <h1 class="display-1 pa-8 text-center" style="color: white">
+          Seguros diseñados para brindarte el mejor servicio y cobertura</h1>
       </v-col>
-    </v-row>
-    <v-row
-      align="center"
-      justify="center"
-    >
+      </v-row>
+      <v-row row wrap align-center>
       <v-col
         class="text-center"
         cols="12"
@@ -157,8 +147,7 @@
                large
                color="accent" >Cotizar</v-btn>
       </v-col>
-    </v-row>
-    </v-layout>
+  </v-row>
   </v-container>
 </template>
 

@@ -144,6 +144,7 @@
                 aspect-ratio="1"
                 class="ma-4"/>
       </v-col>
+    </v-row>
       <v-row
               align="center"
               justify="center">
@@ -182,7 +183,6 @@
         </v-col>
 
       </v-row>
-    </v-row>
   </v-container>
 </template>
 

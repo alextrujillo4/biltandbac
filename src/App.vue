@@ -19,47 +19,29 @@
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn
           text
-          class="btn"
-        >
-          Inicio
-        </v-btn>
+          class="btn" @click="$vuetify.goTo('#Inicio')">Inicio</v-btn>
         <v-btn
           text
-          class="btn"
-        >
-          Seguros
-        </v-btn>
+          class="btn" @click="$vuetify.goTo('#Seguros')">Seguros</v-btn>
         <v-btn
           text
-          class="btn"
-        >
-          Beneficios
-        </v-btn>
+          class="btn" @click="$vuetify.goTo('#Beneficios')">Beneficios</v-btn>
         <v-btn
           text
-          class="btn"
-        >
-          Otros servicios
-        </v-btn>
+          class="btn">Otros servicios</v-btn>
         <v-btn
           text
-          class="btn"
-        >
-          Contacto
-        </v-btn>
+          class="btn" @click="$vuetify.goTo('#Footer')">Contacto</v-btn>
         <v-btn
           class="btn"
           depressed
           rounded
-          color="accent"
-        >
-          Cotizar
-        </v-btn>
+          color="accent">Cotizar Ahora</v-btn>
       </v-toolbar-items>
     </v-app-bar>
     <v-navigation-drawer
       v-model="drawer"
-      absolute
+      fixed
       temporary
     >
       <v-list
@@ -70,30 +52,42 @@
           v-model="group"
           active-class="deep-purple--text text--accent-4"
         >
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-home</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Home</v-list-item-title>
+          <v-list-item class="pa-2">
+            <v-list-item-title class="subtitle-2" @click="drawer=false,$vuetify.goTo('#Inicio')">Inicio</v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-account</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Account</v-list-item-title>
+          <v-list-item class="pa-2">
+            <v-list-item-title class="subtitle-2" @click="drawer=false,$vuetify.goTo('#Seguros')">Seguros</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item class="pa-2">
+            <v-list-item-title class="subtitle-2" @click="drawer=false,$vuetify.goTo('#Beneficios')">Beneficios</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item class="pa-2">
+            <v-list-item-title class="subtitle-2">Otros servicios</v-list-item-title>
+          </v-list-item>
+          <v-list-item class="pa-2">
+            <v-list-item-title class="subtitle-2" @click="drawer=false,$vuetify.goTo('#Footer')">Contacto</v-list-item-title>
+          </v-list-item>
+          <v-list-item class="pa-2" style="background: #0d47a1;"
+          >
+            <v-list-item-title class="white--text subtitle-2">Cotizar ahora</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <v-content>
-      <Paralax />
+    <v-container fluid>
+      <v-layout row wrap align-center>
+      <Paralax  id='Inicio'/>
       <Home />
-      <Seguros />
-      <Beneficios />
-      <HelloWorld />
+      <Seguros id='Seguros'/>
+      <Beneficios id='Beneficios'/>
+      <Empresas />
       <CotizarAhora/>
-    </v-content>
+      <Footer id='Footer'/>
+      </v-layout>
+    </v-container>
   </v-app>
 </template>
 
@@ -105,30 +99,30 @@
     font-weight: 600;
   }
 
-  .display-1 {
-    font-family: 'Montserrat', sans-serif;
-  }
 
 </style>
 
 <script>
-import HelloWorld from './components/Companies';
 import Paralax from './components/Paralax';
 import Home from './components/Nosotros';
 import Seguros from './components/Seguros';
 import Beneficios from './components/Beneficios';
+import Empresas from './components/Companies';
 import CotizarAhora from './components/CotizarAhora'
+import Footer from './components/Footer'
+
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
     Paralax,
     Home,
     Seguros,
     Beneficios,
-    CotizarAhora
+    Empresas,
+    CotizarAhora,
+    Footer
   },
 
   data: () => ({

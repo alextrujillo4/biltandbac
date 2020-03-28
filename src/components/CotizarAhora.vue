@@ -24,10 +24,10 @@
                 <v-text-field
                         v-model="firstname"
                         :rules="nameRules"
-                        :counter="10"
+                        :counter="30"
                         filled
                         dark
-                        label="First name"
+                        label="Nombre"
                         required
                 ></v-text-field>
               </v-col>
@@ -39,7 +39,8 @@
                 <v-text-field
                         v-model="email"
                         :rules="emailRules"
-                        label="E-mail"
+                        label="Correo"
+                        :counter="40"
                         filled
                         dark
                         required

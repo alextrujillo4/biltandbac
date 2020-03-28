@@ -2,16 +2,17 @@
   <v-img
     src="../assets/viaje-seguro-bilt&bac.jpg"
     gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)"
-    height="100vh">
+    height="80vh">
     <v-container fill-height>
       <v-layout row wrap align-center>
         <v-flex class="text-center">
-          <h1 class="display-2 white--text">
-            Te ayudamos a construir tu futuro y cuidamos de ti en tu trayecto
+          <h1 class="display-1 white--text pa-6">
+            Te ayudamos a construir tu futuro y cuidamos de ti en el trayecto
           </h1>
           <v-row
             align="center"
             justify="center"
+
           >
             <v-btn
               class="ma-6"
@@ -20,7 +21,7 @@
               color="accent"
               style="border-radius: 8px;"
             >
-              Cotizar
+              Cotizar Ahora
             </v-btn>
             <v-btn class="ma-6 "
               tile

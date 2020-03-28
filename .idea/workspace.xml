@@ -2,23 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="161d7063-4807-4502-bcca-c7a9d5ae132e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/bnbseguros-contacto.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Copy.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CotizarAhora.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/about.77b918cc.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/app.62753625.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/chunk-vendors.ddf31987.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/app.fb18209d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/chunk-vendors.a76b81c8.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/about.aacfb367.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/about.aacfb367.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/app.f709bcd1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/app.f709bcd1.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/chunk-vendors.a2730067.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/chunk-vendors.a2730067.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/app.e26d54e5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/app.e26d54e5.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-vendors.ba68a5d2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-vendors.ba68a5d2.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Beneficios.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Beneficios.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Companies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Companies.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Marcas.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Marcas.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CotizarAhora.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CotizarAhora.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Paralax.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Paralax.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Seguros.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Seguros.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,13 +61,13 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/styles" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -89,7 +88,9 @@
       <workItem from="1584996688870" duration="4000" />
       <workItem from="1585018078259" duration="6794000" />
       <workItem from="1585173799103" duration="164000" />
-      <workItem from="1585257234614" duration="2351000" />
+      <workItem from="1585257234614" duration="2470000" />
+      <workItem from="1585272248248" duration="6677000" />
+      <workItem from="1585425043247" duration="1638000" />
     </task>
     <servers />
   </component>
@@ -133,10 +134,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="297" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1585020677898" />
-    <state x="295" y="164" width="689" height="472" key="find.popup" timestamp="1585257525144">
+    <state x="295" y="164" width="689" height="472" key="find.popup" timestamp="1585282409453">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="295" y="164" width="689" height="472" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1585257525144" />
+    <state x="295" y="164" width="689" height="472" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1585282409453" />
     <state x="305" y="185" key="run.anything.popup" timestamp="1584380018539">
       <screen x="0" y="23" width="1280" height="709" />
     </state>

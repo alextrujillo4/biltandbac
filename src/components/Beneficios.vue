@@ -15,20 +15,20 @@
         </v-row>
         <v-row>
             <v-col
-            cols="12"
-                  lg="6"
-                  md="12"
-                  sm="12"
-                  xl="6">
+                cols="12"
+                lg="4"
+                xl="4"
+                md="6"
+                sm="12">
                 <v-card
                         elevation="6"
                         class="pa-6"
                         tile
                 >
-                    <v-layout justify-center fill-height>
-                        <v-divider
-                                vertical
-                        />
+                    <v-layout justify-center align-center fill-height
+                              align="center"
+                              justify="center">
+                        <v-divider vertical style="margin-top: 16px"/>
                         <div>
                             <v-card-title class="headline ma-2 active-color">
                                 <v-icon
@@ -48,20 +48,20 @@
                 </v-card>
             </v-col>
             <v-col
-            cols="12"
-                  lg="6"
-                  md="12"
-                  sm="12"
-                  xl="6">
+                cols="12"
+                lg="4"
+                xl="4"
+                md="6"
+                sm="12">
                 <v-card
                         elevation="6"
                         class="pa-6"
                         tile
                 >
-                    <v-layout justify-center fill-height>
-                        <v-divider
-                                vertical
-                        />
+                    <v-layout justify-center align-center fill-height
+                              align="center"
+                              justify="center">
+                        <v-divider vertical style="margin-top: 16px"/>
                         <div>
                             <v-card-title class="headline ma-2 active-color">
                                 <v-icon
@@ -74,29 +74,27 @@
                                 Tarifas Atractivas
                             </v-card-title>
                             <v-card-subtitle class="body-1 ma-2">
-                                Ofrecemos tarifas atractivas y descuentos adicionales en los seguros de autos
+                                te ofrecemos las tarifas más atractivas y disponemos de descuentos adicionales en seguros para vehículos automóviles
                             </v-card-subtitle>
                         </div>
                     </v-layout>
                 </v-card>
             </v-col>
-        </v-row>
-        <v-row>
             <v-col
-            cols="12"
-                  lg="6"
-                  md="12"
-                  sm="12"
-                  xl="6">
+                    cols="12"
+                    lg="4"
+                    xl="4"
+                    md="6"
+                    sm="12">
                 <v-card
                         elevation="6"
                         class="pa-6"
                         tile
                 >
-                    <v-layout justify-center fill-height>
-                        <v-divider
-                                vertical
-                        />
+                    <v-layout justify-center align-center fill-height
+                              align="center"
+                              justify="center">
+                        <v-divider vertical style="margin-top: 16px"/>
                         <div>
                             <v-card-title class="headline ma-2 active-color">
                                 <v-icon
@@ -106,7 +104,7 @@
                                 >
                                    mdi-home-heart
                                 </v-icon>
-                                Nos preocupamos por ti
+                                Nos importas
                             </v-card-title>
                             <v-card-subtitle class="body-1 ma-2">
                                 Planes de alta profección y rendimiento para
@@ -117,20 +115,20 @@
                 </v-card>
             </v-col>
             <v-col
-            cols="12"
-                  lg="6"
-                  md="12"
-                  sm="12"
-                  xl="6">
+                    cols="12"
+                    lg="4"
+                    xl="4"
+                    md="6"
+                    sm="12">
                 <v-card
                         elevation="6"
                         class="pa-6"
                         tile
                 >
-                    <v-layout justify-center fill-height>
-                        <v-divider
-                                vertical
-                        />
+                    <v-layout justify-center align-center fill-height
+                              align="center"
+                              justify="center">
+                        <v-divider vertical style="margin-top: 16px"/>
                         <div>
                             <v-card-title class="headline ma-2 active-color">
                                 <v-icon
@@ -150,23 +148,21 @@
                     </v-layout>
                 </v-card>
             </v-col>
-        </v-row>
-        <v-row>
             <v-col
-            cols="12"
-                  lg="6"
-                  md="12"
-                  sm="12"
-                  xl="6">
+                    cols="12"
+                    lg="4"
+                    xl="4"
+                    md="6"
+                    sm="12">
                 <v-card
                         elevation="6"
                         class="pa-6"
                         tile
                 >
-                    <v-layout justify-center fill-height>
-                        <v-divider
-                                vertical
-                        />
+                    <v-layout justify-center align-center fill-height
+                              align="center"
+                              justify="center">
+                        <v-divider vertical style="margin-top: 16px"/>
                         <div>
                             <v-card-title class="headline ma-2 active-color">
                                 <v-icon
@@ -187,20 +183,20 @@
                 </v-card>
             </v-col>
             <v-col
-            cols="12"
-                  lg="6"
-                  md="12"
-                  sm="12"
-                  xl="6">
+                    cols="12"
+                    lg="4"
+                    xl="4"
+                    md="6"
+                    sm="12">
                 <v-card
                         elevation="6"
                         class="pa-6"
                         tile
                 >
-                    <v-layout justify-center fill-height>
-                        <v-divider
-                                vertical
-                        />
+                    <v-layout justify-center align-center fill-height
+                              align="center"
+                              justify="center">
+                        <v-divider vertical style="margin-top: 16px"/>
                         <div>
                             <v-card-title class="headline ma-2 active-color">
                                 <v-icon
