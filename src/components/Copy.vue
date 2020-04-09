@@ -15,15 +15,12 @@
           Comprueba nuestros beneficios
         </h1>
         <p>Cotice Ahora</p>
-        <v-btn
+        <!--v-btn
                 class="ma-6"
                 tile
                 large
                 color="accent"
-                style="border-radius: 8px;"
-        >
-          Cotizar
-        </v-btn>
+                style="border-radius: 8px;">Cotizar</v-btn-->
       </v-col>
     </v-row>
       </v-layout>

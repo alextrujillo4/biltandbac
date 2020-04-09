@@ -16,25 +16,18 @@
       />
       <v-spacer />
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn text
-               class="btn"  color="#002554" @click="$vuetify.goTo('#Inicio')">Inicio</v-btn>
-        <v-btn text
-               class="btn"  color="#002554" @click="$vuetify.goTo('#Seguros')">Seguros</v-btn>
-        <v-btn text
-               class="btn"  color="#002554" @click="$vuetify.goTo('#Beneficios')">Beneficios</v-btn>
-        <v-btn text
-               class="btn" color="#002554" to="/consultoria">Consultoría</v-btn>
-        <v-btn text
-               class="btn"  color="#002554" @click="$vuetify.goTo('#Footer')">Contacto</v-btn>
-        <!--v-btn
+        <v-btn
+                text
+                class="btn" to="/">Inicio</v-btn>
+        <v-btn
+                text
+                class="btn" @click="$vuetify.goTo('#Footer')">Contacto</v-btn>
+    <!--v-btn
                 class="btn"
                 depressed
                 rounded
                 color="accent">Cotizar Ahora</v-btn-->
       </v-toolbar-items>
-      <v-btn
-        class="hidden-sm-and-up"
-        color="primary">Cotizar</v-btn>
     </v-app-bar>
     <v-navigation-drawer
             v-model="drawer"
@@ -49,21 +42,10 @@
                 v-model="group"
                 active-class="deep-purple--text text--accent-4"
         >
-          <v-list-item class="pa-2">
-            <v-list-item-title class="subtitle-2" @click="drawer=false,$vuetify.goTo('#Inicio')">Inicio</v-list-item-title>
+          <v-list-item class="pa-2" to="/">
+            <v-list-item-title class="subtitle-2" >Inicio</v-list-item-title>
           </v-list-item>
 
-          <v-list-item class="pa-2">
-            <v-list-item-title class="subtitle-2" @click="drawer=false,$vuetify.goTo('#Seguros')">Seguros</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item class="pa-2">
-            <v-list-item-title class="subtitle-2" @click="drawer=false,$vuetify.goTo('#Beneficios')">Beneficios</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item class="pa-2" to="/consultoria">
-            <v-list-item-title class="subtitle-2" >Consultoría</v-list-item-title>
-          </v-list-item>
           <v-list-item class="pa-2">
             <v-list-item-title class="subtitle-2" @click="drawer=false,$vuetify.goTo('#Footer')">Contacto</v-list-item-title>
           </v-list-item>
@@ -76,11 +58,7 @@
     </v-navigation-drawer>
     <v-container fluid>
       <v-layout row wrap align-center>
-        <Paralax  id='Inicio'/>
-        <Home />
-        <Seguros id='Seguros'/>
-        <Beneficios id='Beneficios'/>
-        <Empresas />
+        <Asociados/>
         <CotizarAhora/>
         <Footer id='Footer'/>
       </v-layout>
@@ -103,7 +81,6 @@
   .my-float{
     margin-top:16px;
   }
-
   .float{
     position:fixed;
     width:60px;
@@ -122,26 +99,17 @@
 </style>
 
 <script>
-  import Paralax from '../components/Paralax';
-  import Home from '../components/Nosotros';
-  import Seguros from '../components/Seguros';
-  import Beneficios from '../components/Beneficios';
-  import Empresas from '../components/Companies';
-  import CotizarAhora from '../components/CotizarAhora'
   import Footer from '../components/Footer'
-
+  import CotizarAhora from '../components/CotizarAhora'
+  import Asociados from '../components/Asociados'
 
   export default {
     name: 'App',
 
     components: {
-      Paralax,
-      Home,
-      Seguros,
-      Beneficios,
-      Empresas,
+      Footer,
       CotizarAhora,
-      Footer
+      Asociados
     },
 
     data: () => ({

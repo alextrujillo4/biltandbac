@@ -11,13 +11,12 @@
                   xl="6"
           >
             <v-layout justify-center fill-height>
-
             <v-divider
                     class="mx-4"
                     vertical
             />
           <div >
-            <h1 class="display-1 mb-4">
+            <h1 class="display-1 mb-6" color="#002554">
               Sobre Nosotros
             </h1>
             <p class="body-2">
@@ -50,9 +49,7 @@
   </v-container>
 </template>
 
-<style scoped>
+<style lang="scss">
+    @import '../styles/variables.scss';
     @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Poppins:400,500,600,700&display=swap');
-
-
-
 </style>

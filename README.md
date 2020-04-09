@@ -1,4 +1,4 @@
-# bit-and-lac
+# Bilt & Bac
 
 ## Project setup
 ```

@@ -3,12 +3,11 @@
 
 // Globals
 $body-font-family: 'Poppins', serif;
-$typoOptions: headline, body-1, body-2, title, caption, overline;
+$typoOptions: body-1, body-2, title, caption, overline;
 #app {
         font-family: $body-font-family, sans-serif !important;
         @each $typoOption in $typoOptions {
                 .#{$typoOption} {
-
                         font-family: $body-font-family, sans-serif !important;
                 }
         }
@@ -21,13 +20,14 @@ $typoOptions: headline, body-1, body-2, title, caption, overline;
 }
 
 $body-font-family-title: 'Montserrat', serif;
-$typoHeadOptions:display-4, display-3,display-1,display-2, subtitle-1, subtitle-2;
+$typoHeadOptions:display-4, display-3,display-1,display-2, subtitle-1, subtitle-2,headline;
 #app {
         font-family: $body-font-family, sans-serif !important;
         @each $typoOption in $typoHeadOptions {
                 .#{$typoOption} {
                         font-family: $body-font-family-title, sans-serif !important;
-                        font-weight: 600;
+                        font-weight: 700;
+                        color: #002554;
                 }
         }
 }
@@ -35,10 +35,27 @@ $typoHeadOptions:display-4, display-3,display-1,display-2, subtitle-1, subtitle-
 .v-btn {
         text-transform:none !important;
         border-radius: 8px;
-
 }
 .local-white{
         color: white;
+}
+
+.my-float{
+        margin-top:16px;
+}
+.float{
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:40px;
+        right:40px;
+        background-color:#25d366;
+        color:#FFF;
+        border-radius:50px;
+        text-align:center;
+        font-size:30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index:100;
 }
 
 
