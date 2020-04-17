@@ -4,7 +4,7 @@
             app
             color="secondary">
       <span class="hidden-sm-and-up">
-        <v-app-bar-nav-icon @click="drawer = true" />
+        <v-app-bar-nav-icon @click="drawer = !drawer" />
       </span>
       <v-img
               alt="Vuetify Logo"
@@ -51,7 +51,7 @@
           </v-list-item>
           <v-list-item class="pa-2" style="background: #0d47a1;"
           >
-            <!--v-list-item-title class="white--text subtitle-2">Cotizar ahora</v-list-item-title-->
+            <v-list-item-title class="white--text subtitle-2">Cotizar ahora</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
@@ -63,10 +63,18 @@
         <Footer id='Footer'/>
       </v-layout>
     </v-container>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <a href="https://api.whatsapp.com/send?phone=528112904687&text=&source=&data=" class="float" target="_blank">
-      <i class="fa fa-whatsapp my-float"></i>
-    </a>
+    <v-btn class="float" target="_blank"
+           color="green"
+           fixed
+           bottom
+           right
+           fab
+           href="https://api.whatsapp.com/send?phone=528112904687&text=&source=&data="
+    >
+      <v-icon color="white">
+        mdi-whatsapp
+      </v-icon>
+    </v-btn>
   </v-app>
 </template>
 

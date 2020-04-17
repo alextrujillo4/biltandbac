@@ -107,7 +107,7 @@
               md="4"
               sm="6">
         <v-img
-                src="../assets/companies/Afirme.png"
+                src="../assets/companies/PrimeroSeguros.png"
                 aspect-ratio="1"
                 class="ma-4"/>
       </v-col>
@@ -159,17 +159,7 @@
                   aspect-ratio="1"
                   class="ma-4"/>
         </v-col>
-        <v-col
-                cols="6"
-                lg="2"
-                xl="2"
-                md="4"
-                sm="6">
-          <v-img
-                  src="../assets/companies/PrimeroSeguros.png"
-                  aspect-ratio="1"
-                  class="ma-4"/>
-        </v-col>
+
         <v-col
                 cols="6"
                 lg="2"

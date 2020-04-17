@@ -18,10 +18,10 @@
       <v-col
         class="text-center"
         cols="6"
+        xl="3"
         lg="3"
         md="6"
         sm="6"
-        xl="3"
       >
         <v-card
           class="pa-2"

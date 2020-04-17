@@ -2,7 +2,7 @@
   <v-container  >
     <v-layout row wrap align-center >
       <v-col
-                  class="text-start"
+                  class="text-start mt-12 mb-12"
                   offset="12"
                   cols="12"
                   lg="6"
@@ -12,18 +12,19 @@
           >
             <v-layout justify-center fill-height>
             <v-divider
-                    class="mx-4"
-                    vertical
-            />
+                    class="mx-6 hidden-sm-and-down mt-n4"
+                    vertical="true"
+                    aria-orientation="vertical" style="border-width: 240px 3px 0 3px"/>
           <div >
-            <h1 class="display-1 mb-6" color="#002554">
+            <h1 class="display-1 ml-8 mr-8 mb-4" color="#002554" >
               Sobre Nosotros
             </h1>
-            <p class="body-2">
+
+            <p class="body-1  ml-8 mr-8">
               Somos un grupo con más de 20 años de experiencia a la asesoría en administración patrimonial y
               administración de riesgos.
             </p>
-            <p class="body-2">
+            <p class="body-1  ml-8 mr-8">
               Contamos con el convenio de aseguradoras y financiadoras reconocidas a nivelnacional, para ofrecerte
               el mejor servicio.
             </p>

@@ -41,8 +41,8 @@
                         <v-icon :color='hover ? "light-blue darken-4" : "accent"' class="ma-4 white--text" x-large>
                             mdi-car
                         </v-icon>
-                        <h1 :class='hover ? "headline ma-2 hover-active" : "headline  ma-2 local-white white--text"'>
-                            Seguro de Autos individuales
+                        <h1 :class='hover ? "headline ma-3 hover-active" : "headline  ma-3 local-white white--text"'>
+                            Seguro de Autos Individuales
                         </h1>
                         <p :class='hover ? "text-start body-2  ma-4 hover-active" : " text-start body-2  ma-4 local-white "'>
                             Este seguro tiene por objeto, reparar o indemnizar
@@ -52,10 +52,7 @@
                         </p>
                     </v-card>
                 </v-hover>
-                <!--v-btn class="ma-2 btn"
-                       large
-                       color="accent" >Cotizar</v-btn-->
-
+                <v-btn class="ma-3 btn" large color="accent" @click="moveStep('Seguros de Autos Individuales')">Cotizar</v-btn>
             </v-col>
             <v-col
                     class="text-center"
@@ -75,7 +72,7 @@
                         <v-icon :color='hover ? "light-blue darken-4" : "accent"' class="ma-4" x-large>
                             mdi-hospital-building
                         </v-icon>
-                        <h1 :class='hover ? "headline ma-2 hover-active" : "headline  ma-2 local-white white--text"'>
+                        <h1 :class='hover ? "headline ma-3 hover-active" : "headline  ma-3 local-white white--text"'>
                             Seguros Gastos Médicos Mayores
                         </h1>
                         <p :class='hover ? "text-start body-2  ma-4 hover-active" : " text-start body-2  ma-4 local-white white--text"'>
@@ -88,10 +85,7 @@
                         </p>
                     </v-card>
                 </v-hover>
-                <!--v-btn class="ma-2 btn"
-                       large
-                       color="accent" >Cotizar</v-btn-->
-
+                <v-btn class="ma-3 btn" large color="accent" @click="moveStep('Seguro de Gastos Medicos')">Cotizar</v-btn>
             </v-col>
             <v-col
                     class="text-center"
@@ -112,7 +106,7 @@
                         <v-icon :color='hover ? "light-blue darken-4" : "accent"' class="ma-4" x-large>
                             mdi-shield-account
                         </v-icon>
-                        <h1 :class='hover ? "headline ma-4 black--text" : "headline  ma-4 local-white white--text"'>
+                        <h1 :class='hover ? "headline ma-3 hover-active" : "headline  ma-3 local-white white--text"'>
                             Seguros de Vida
                         </h1>
                         <p :class='hover ? "text-start body-2  ma-4 hover-active" : " text-start body-2  ma-4 local-white white--text"'>
@@ -123,9 +117,7 @@
                         </p>
                     </v-card>
                 </v-hover>
-                <!--v-btn class="ma-2 btn"
-                        large
-                        color="accent" >Cotizar</v-btn-->
+                <v-btn class="ma-3 btn" large color="accent" @click="moveStep('Seguro de Vida')">Cotizar</v-btn>
             </v-col>
             <v-col class="text-center"
                    cols="12"
@@ -143,8 +135,8 @@
                         <v-icon :color='hover ? "light-blue darken-4" : "accent"' class="ma-4" x-large>
                             mdi-domain
                         </v-icon>
-                        <h1 :class='hover ? "headline ma-2 hover-active" : "headline  ma-2 local-white white--text"'>
-                            Seguros contra daños
+                        <h1 :class='hover ? "headline ma-3 hover-active" : "headline  ma-3 local-white white--text"'>
+                            Seguros Contra Daños
                         </h1>
                         <p :class='hover ? "text-start body-2  ma-4 hover-active" : " text-start body-2  ma-4 local-white white--text "'>
                             Es un seguro que protege el patrimonio de tu empresa
@@ -154,13 +146,22 @@
                         </p>
                     </v-card>
                 </v-hover>
-                <!--v-btn class="ma-2 btn"
-                       large
-                       color="accent" >Cotizar</v-btn-->
+                <v-btn class="ma-3 btn" large color="accent" @click="moveStep('Seguro Contra Daños')">Cotizar</v-btn>
             </v-col>
         </v-row>
     </v-container>
 </template>
+<script>
+
+    export default {name: 'App',
+    methods:{
+        moveStep(seguro){
+            this.$router.push("?seguro="+seguro);
+            this.$emit('stepChanged',true)
+        }
+    },
+    }
+</script>
 
 <style lang="scss">
     @import './src/styles/variables.scss';

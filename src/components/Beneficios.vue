@@ -9,7 +9,7 @@
                     cols="8"
             >
                 <h1 class="display-1 active-color ma-8">
-                    ¿Por qué Nosotros?
+                    ¿Por qué elegirnos?
                 </h1>
             </v-col>
         </v-row>
@@ -38,7 +38,7 @@
                                 >
                                     mdi-earth
                                 </v-icon>
-                                Precios competitivos
+                                Competitividad
                             </v-card-title>
                             <v-card-subtitle class="body-1 ma-2">
                                 Desarrollamos planes de seguros actualizados y competitivos en el mercado mundial.
@@ -74,7 +74,7 @@
                                 Tarifas Atractivas
                             </v-card-title>
                             <v-card-subtitle class="body-1 ma-2">
-                                te ofrecemos las tarifas más atractivas y disponemos de descuentos adicionales en seguros para vehículos automóviles
+                                Te ofrecemos las tarifas más atractivas y disponemos de descuentos adicionales en seguros para vehículos automoviles
                             </v-card-subtitle>
                         </div>
                     </v-layout>
@@ -138,7 +138,7 @@
                                 >
                                     mdi-robot
                                 </v-icon>
-                                Nuevas tecnologías
+                                Vanguardia
                             </v-card-title>
                             <v-card-subtitle class="body-1 ma-2">
                                 Uso de nuevas tecnologías para mantener una
