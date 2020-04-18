@@ -13,8 +13,8 @@
             <v-layout justify-center fill-height>
             <v-divider
                     class="mx-6 hidden-sm-and-down mt-n4"
-                    vertical="true"
-                    aria-orientation="vertical" style="border-width: 240px 3px 0 3px"/>
+                    vertical
+                    style="border-width: 240px 3px 0 3px"/>
           <div >
             <h1 class="display-1 ml-8 mr-8 mb-4" color="#002554" >
               Sobre Nosotros

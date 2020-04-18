@@ -24,7 +24,7 @@
                        md="10"
                        sm="10">
                     <v-select
-                            @change="itemSelected"
+                            @change="changedValue"
                             :items="items"
                             v-if="!this.seguro"
                             filled
@@ -73,7 +73,10 @@
             SeguroMedico,
             SeguroVida
         },
-        created() {
+        methods: {
+            changedValue: function (value) {
+                this.itemSelected = value
+            },
         },
         watch: {
             seguro: function() {

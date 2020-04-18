@@ -97,7 +97,7 @@
 </script>
 
 <style lang="scss">
-    @import './src/styles/variables.scss';
+    @import '../../styles/variables';
 
     .hover-active {
         color: #454545;

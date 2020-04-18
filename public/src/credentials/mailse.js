@@ -1,10 +1,10 @@
-
+/*
 function sendMail() {
     var url = 'https://us-central1-biltandbac.cloudfunctions.net/emailMessage';
     var data = {name: 'Alex Trujillo'};
 
     fetch(url, {
-        method: 'POST', // or 'PUT'
+        method: 'GET', // or 'PUT'
         body: JSON.stringify(data), // data can be `string` or {object}!
         headers:{
             'Content-Type': 'application/json',
@@ -21,5 +21,5 @@ function sendMail() {
         .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
 
 }
-
-export default sendMail
+*/
+//export default sendMail

@@ -132,7 +132,7 @@
 
 <script>
     import Footer from '../components/Footer'
-    import Card from '../components/Card'
+    import Card from '../components/items/Card'
     import {productosRef} from "../credentials/firebase";
 
     export default {
