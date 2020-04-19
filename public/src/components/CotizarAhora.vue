@@ -92,10 +92,6 @@
   </v-img>
 </template>
 <script>
-  //import sendMail from "../credentials/mailse";
-  import key from '../credentials/biltandbac.json';
-  const { GoogleToken } = require('gtoken');
-
   export default {
     data () {
       const defaultForm = Object.freeze({
@@ -121,50 +117,6 @@
         })
       }
 
-    },
-    created: function () {
-      const gtoken = new GoogleToken({
-        subject: key.client_email,
-        key: key.private_key,
-        scope: [
-          "https://www.googleapis.com/auth/cloud-platform",
-          "https://www.googleapis.com/auth/dialogflow",
-        ]
-      });
-
-      gtoken.getToken((err, token) => {
-        if (err) {
-          console.log("ERROR")
-          console.log(err);
-          return;
-        }
-        this.accessToken = token.access_token
-      });
-    },
-    methods:{
-      setDeploy(){
-        let data = JSON.stringify({
-          "name": [
-            { "name": "Alex"},
-            { "accestoken":this.accestoken}
-          ]
-        })
-        this.axios.post('https://us-central1-biltandbac.cloudfunctions.net/emailMessage/hello',
-                data,{
-                  headers: {
-                    "Content-Type": "application/json",
-                    'Access-Control-Allow-Origin': '*'
-                  }})
-                .then(response => {
-                       console.log(":D")
-                  console.log(response)
-                })
-                .catch( err => {
-                  console.log("D':")
-                  console.log(err)
-                })
-
-      }
     },
     computed: {
       formIsValid () {

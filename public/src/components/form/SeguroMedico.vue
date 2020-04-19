@@ -55,7 +55,7 @@
                                 offset-y
                                 ref="menu"
                                 transition="scale-transition"
-                                v-model="form.birdthdate"
+                                v-model="form.birthdate"
                         >
                             <template v-slot:activator="{ on }">
                                 <v-text-field
@@ -63,14 +63,14 @@
                                         filled
                                         label="Fecha de nacimiento"
                                         readonly
-                                        v-model="birdthdate"
+                                        v-model="birthdate"
                                         v-on="on"
                                 ></v-text-field>
                             </template>
-                            <v-date-picker no-title scrollable v-model="birdthdate">
+                            <v-date-picker no-title scrollable v-model="birthdate">
                                 <v-spacer></v-spacer>
                                 <v-btn @click="menu = false" color="primary" text>Cancel</v-btn>
-                                <v-btn @click="$refs.menu.save(birdthdate)" color="primary" text>OK</v-btn>
+                                <v-btn @click="$refs.menu.save(birthdate)" color="primary" text>OK</v-btn>
                             </v-date-picker>
                         </v-menu>
                     </v-col>
@@ -293,7 +293,7 @@
                     height:'',
 
                 }),
-                birdthdate: new Date().toISOString().substr(0, 10),
+                birthdate: new Date().toISOString().substr(0, 10),
                 checkbox: false,
                 payment_list: ["Anual", "Semestral", "Trimestral", "Mensual"],
                 gender_list: ["Mujer", "Hombre", "Otro"],
@@ -320,18 +320,50 @@
             }
         },
         methods: {
+            setDeploy(){
+                let data = JSON.stringify({
+                    "name": [
+                        { "variable": "Automatic"},
+                        { "name": this.form.firstname + " " + this.form.lastname},
+                        { "email": this.form.email},
+                        { "phone": this.form.phone},
+                        { "birthdate": this.form.birthdate},
+                        { "seguro_info":{
+                                "type": "Seguros de Autos Individuales",
+                                "coverage": this.form.cobertura
+                            }
+                        },
+                    ]
+                });
+                this.axios.post('https://us-central1-biltandbac.cloudfunctions.net/emailMessage/hello',
+                    data,{
+                        headers: {
+                            "Content-Type": "application/json",
+                            'Access-Control-Allow-Origin': '*'
+                        }})
+                    .then(response => {
+                        console.log("Message Sent.")
+                        console.log(response)
+                    })
+                    .catch( err => {
+                        console.log("Ups.. Error D':")
+                        console.log(err)
+                    })
+
+            },
             resetForm () {
                 this.form = Object.assign({}, this.defaultForm)
                 this.$refs.form.reset()
             },
             submit () {
+                this.setDeploy()
                 this.$router.push(
                     "/cotizador" +
                     "?firstname="+this.form.firstname +
                     "&lastname="+this.form.lastname +
                     "&email="+this.form.email +
                     "&phone="+this.form.phone +
-                    "&birdthdate="+this.birdthdate +
+                    "&birthdate="+this.birthdate +
                     "&postalcode="+this.form.postalcode +
                     "&brand="+this.form.brand +
                     "&payment="+this.form.payment +

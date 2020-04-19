@@ -1,6 +1,6 @@
 <template>
     <v-content>
-        <v-layout v-if="!products_data || products_data.length === 0" class=" mt-n12 mb-n4">
+        <v-layout v-if="!data || data.length === 0" class=" mt-n12 mb-n4">
             <v-flex lg12 md12 sm12 xl12>
                 <p class="mx-auto title" v-if="data.index === 0"> Nuestra Recomendación:</p>
                 <p class="mx-auto title" v-if="data.index === 1"> Otros Seguros que pueden interesarte:</p>
@@ -21,9 +21,11 @@
                     <v-card-text class="headline ">"{{data.product.description_short}}"</v-card-text>
                     <v-card-actions>
                         <v-btn
+                                class="ml-2 mb-2"
                                 color="primary"
+                                medium
                                 depressed
-                                @click="mailer=true"
+                                @click="mailer=true,setDeploy()"
                         >
                             ¡Lo quiero!
                         </v-btn>
@@ -61,7 +63,7 @@
                 <v-card-title
                         class="headline grey lighten-2"
                         primary-title>
-                    Mensaje enviado
+                    ¡Mensaje enviado!
                 </v-card-title>
 
                 <v-card-text class="mt-6">
@@ -78,7 +80,7 @@
                             text
                             @click="mailer = false"
                     >
-                        I accept
+                        Acepto
                     </v-btn>
                 </v-card-actions>
             </v-card>
@@ -93,13 +95,38 @@
             show: false,
             mailer:false
         }),
+        methods:{
+            setDeploy(){
+                let data = JSON.stringify({
+                    "name": this.data.user
+                });
+                this.axios.post('https://us-central1-biltandbac.cloudfunctions.net/emailMessage/hello',
+                    data,{
+                        headers: {
+                            "Content-Type": "application/json",
+                            'Access-Control-Allow-Origin': '*'
+                        }})
+                    .then(response => {
+                        console.log("Message Sent.")
+                        console.log(response)
+                    })
+                    .catch( err => {
+                        console.log("Ups.. Error D':")
+                        console.log(err)
+                    })
+
+            }
+        }
     }
 </script>
 
 <style lang="scss">
+
     @import '../../styles/variables';
 
     .hover-active {
         color: #454545;
     }
 </style>
+
+

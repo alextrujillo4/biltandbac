@@ -79,7 +79,7 @@
                     </v-flex>
                   </v-layout>
                   <!--Product Card-->
-                  <Card class="ml-6 mr-6" v-else v-for="(item, i) in products_data" :key="item.id" v-bind:data="{product: item, index: i }"/>
+                  <Card class="ml-6 mr-6" v-else v-for="(item, i) in products_data" :key="item.id" v-bind:data="{product: item, index: i, user:user }"/>
             </v-card>
           </v-flex>
         </v-layout>
@@ -151,22 +151,42 @@
                 brand: "",
                 products_data: [],
                 seguro: "",
+                user: "",
+                phone: "",
+                birthdate: "",
+                variable:""
             }
         },
         created() {
             this.drawer = (!(this.$vuetify.breakpoint.name === 'xs' || this.$vuetify.breakpoint.name === 'sm'))
-            this.name = this.$route.query.firstname
+            this.name = this.$route.query.firstname + " " + this.$route.query.lastname
+            this.email = this.$route.query.email
+            this.phone = this.$route.query.phone
+            this.birthdate = this.$route.query.birthdate
             this.formType = this.$route.query.formType
             this.cobertura = this.$route.query.cobertura
             this.payment = this.$route.query.payment
             this.brand = this.$route.query.brand
             this.seguro = this.$route.query.seguro
-
+            this.variable = "Cotizador"
+            this.user= [
+                {variable: this.variable},
+                {name: this.name},
+                {email: this.email},
+                {phone: this.phone},
+                {birthdate: this.birthdate},
+                {seguro_info: {
+                        type: this.formType,
+                        coverage: this.cobertura
+                    }
+                }
+            ]
         },
         mounted() {
             this.getProducts()
         },
         methods: {
+
             getFirebaseProducts() {
                 return new Promise(function (resolve, reject) {
                     productosRef.once('value').then(function (snap) {

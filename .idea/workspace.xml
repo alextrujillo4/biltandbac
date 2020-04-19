@@ -4,7 +4,21 @@
     <list default="true" id="161d7063-4807-4502-bcca-c7a9d5ae132e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dist/css/app.50efb869.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dist/css/chunk-vendors.6dacb454.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dist/js/app.fc32751e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dist/js/app.fc32751e.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dist/js/chunk-vendors.c859adc7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dist/js/chunk-vendors.c859adc7.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/src/components/CotizarAhora.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/CotizarAhora.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/components/form/SeguroAutos.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/form/SeguroAutos.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/components/form/SeguroAutosFlotilla.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/form/SeguroAutosFlotilla.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/components/form/SeguroCasa.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/form/SeguroCasa.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/components/form/SeguroMedico.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/form/SeguroMedico.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/components/form/SeguroVida.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/form/SeguroVida.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/components/items/Card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/items/Card.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/views/Cotizador.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/views/Cotizador.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +115,7 @@
       <workItem from="1587219896144" duration="7036000" />
       <workItem from="1587228288337" duration="4210000" />
       <workItem from="1587316513598" duration="199000" />
-      <workItem from="1587316717008" duration="2687000" />
+      <workItem from="1587316717008" duration="9476000" />
     </task>
     <servers />
   </component>
@@ -146,11 +160,11 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="297" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1585020677898" />
-    <state x="295" y="164" width="689" height="472" key="find.popup" timestamp="1587222782676">
+    <state x="295" y="164" width="689" height="472" key="find.popup" timestamp="1587325148909">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="295" y="164" width="689" height="472" key="find.popup/0.0.1280.800/-1366.-255.1366.768@0.0.1280.800" timestamp="1585780184904" />
-    <state x="295" y="164" width="689" height="472" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1587222782676" />
+    <state x="295" y="164" width="689" height="472" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1587325148909" />
     <state x="305" y="185" key="run.anything.popup" timestamp="1584380018539">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
