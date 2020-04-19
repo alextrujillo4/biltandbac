@@ -23,7 +23,7 @@ al proyecto
 
 Para Vue.js, se utilizó la capa [Vuetify](https://vuetifyjs.com/)
 
-Para el envío de correos electrónicos, se utilizó nodemailer, el código asignado a esta acción se encuentra en functions/index.js
+Para el envío de correos electrónicos, se utilizó [Nodemailer](https://nodemailer.com/usage/using-gmail/), el código asignado a esta acción se encuentra en functions/index.js
 
 **El dominio se encuentra direccionado a firebase hosting**
 
