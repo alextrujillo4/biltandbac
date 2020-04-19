@@ -11,7 +11,7 @@
         <h1 class="display-1 white--text ">
           Ponte en contacto con nosotros
         </h1>
-        <v-form  class="ma-6">
+        <v-form   @submit.prevent="submit" ref="form" class="ma-6">
           <v-container>
             <v-row>
               <v-col
@@ -21,9 +21,8 @@
                       md="12"
                       sm="4">
                 <v-text-field
-                        v-model="name"
+                        v-model="form.name"
                         :rules="rules.name"
-                        :counter="30"
                         filled
                         dark
                         label="Nombre"
@@ -36,10 +35,9 @@
                       md="12"
                       sm="4">
                 <v-text-field
-                        v-model="email"
-                        :rules="rules.email"
-                        label="Correo"
-                        :counter="40"
+                        v-model="form.subject"
+                        :rules="rules.subject"
+                        label="Asunto"
                         filled
                         dark
                         required></v-text-field>
@@ -52,9 +50,8 @@
                       md="12"
                       sm="4">
                 <v-textarea
-                        v-model="email"
+                        v-model="form.body"
                         :rules="rules.body"
-                        :counter="200"
                         filled
                         dark
                 >
@@ -71,12 +68,15 @@
                       lg="12"
                       md="12"
                       sm="4">
+
                 <v-btn
-                        @click="setDeploy(),mailer=true"
-                        tile
-                        x-large
+                        :href="`mailto:plara@bnbseguros.com?subject=${this.form.subject} | Mensaje desde Web&body=Hola mi numbre es: ${this.form.name}, ${this.form.body}`"
                         color="accent"
                         style="border-radius: 8px;"
+                        tile
+                        x-large
+                        :disabled="!formIsValid"
+                        type="submit"
                 >
                   Enviar
                 </v-btn>
@@ -88,37 +88,6 @@
       </v-col>
     </v-row>
       </v-layout>
-      <v-dialog
-              v-model="mailer"
-              width="500"
-      >
-
-        <v-card>
-          <v-card-title
-                  class="headline grey lighten-2"
-                  primary-title>
-            Mensaje enviado
-          </v-card-title>
-
-          <v-card-text class="mt-6">
-            Hemos enviado tu mensaje. Un representante se contactará pronto contigo.
-            para más dudas puedes escribirnos por whatsapp
-            <a target="_blank" href="https://api.whatsapp.com/send?phone=528112904687&text=&source=&data="
-            >haciendo click aquí.</a>
-          </v-card-text>
-
-
-          <v-card-actions>
-            <v-btn
-                    color="primary"
-                    text
-                    @click="mailer = false"
-            >
-              I accept
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
     </v-container>
   </v-img>
 </template>
@@ -131,26 +100,31 @@
     data () {
       const defaultForm = Object.freeze({
         name: '',
-        email: '',
+        subject: '',
         body: '',
       })
       return {
         form: Object.assign({}, defaultForm),
         rules: {
           name: [val => (val || '').length > 0 || 'Es requerido tu Nombre'],
-          email: [val => (val || '').length > 0 || 'Es requerido tu eMail'],
+          subject: [val => (val || '').length > 0 || 'Es requerido un asunto'],
           body: [val => (val || '').length > 0 || 'Es requerido un texto de expecificación'],
         },
-        mailer: false,
         name: "",
-        email: "",
+        subject: "",
         body: "",
-        accessToken: ""
+        accessToken: "",
+        defaultForm: Object.freeze({
+          name: '',
+          subject: '',
+          body: '',
+        })
       }
+
     },
     created: function () {
       const gtoken = new GoogleToken({
-        email: key.client_email,
+        subject: key.client_email,
         key: key.private_key,
         scope: [
           "https://www.googleapis.com/auth/cloud-platform",
@@ -196,8 +170,9 @@
       formIsValid () {
         return (
                 this.form.name &&
-                this.form.mail &&
+                this.form.subject &&
                 this.form.body
+
         )
       }
     },

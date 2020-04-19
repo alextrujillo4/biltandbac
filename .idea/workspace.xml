@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="161d7063-4807-4502-bcca-c7a9d5ae132e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/functions/biltandbac.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/src/credentials/biltandbac.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/biltandbac-firebase.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/functions/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/app.6cde220a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/app.6cde220a.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/components/Card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/items/Card.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/src/components/CotizarAhora.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/CotizarAhora.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/components/Nosotros.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/Nosotros.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/components/dialogs/DialogContent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/dialogs/DialogContent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/credentials/mailse.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/credentials/mailse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/views/Cotizador.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/views/Cotizador.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/views/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vue.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/public/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +99,9 @@
       <workItem from="1587095408986" duration="15094000" />
       <workItem from="1587150057863" duration="143000" />
       <workItem from="1587219896144" duration="7036000" />
-      <workItem from="1587228288337" duration="3935000" />
+      <workItem from="1587228288337" duration="4210000" />
+      <workItem from="1587316513598" duration="199000" />
+      <workItem from="1587316717008" duration="2687000" />
     </task>
     <servers />
   </component>

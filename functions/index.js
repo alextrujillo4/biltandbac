@@ -12,28 +12,47 @@ app.get('/hello', (req, res) => {
 });
 
 app.post('/hello', (req, res) => {
-    const { name} = req.body;
-    console.log(name[0].name)
-
+    const { data} = req.body;
+    const type = data[0].type
+    //<<<
+    const email = data[0].email
+    const body = data[0].body
+    const name = data[0].name
+    const phone = data[0].phone
+    //<<<
+    const seguro_info = data[0].seguro_info
+    //<<<
 
     var transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
         port: 465,
         secure: true,
         auth: {
-            user: 'pruebaalex159@gmail.com',
-            pass: 'antivirus+'
+            user: 'info@bnbseguros.com',
+            pass: '80408975Jl.'
         }
     });
+    var mailOptions = null
 
+    if (type === "Automatic"){
+         mailOptions = {
+            from: "Bilt & Bac | Mensaje Automático <info@bnbseguros.com>",
+            to: email,
+            subject: "Alguien podría estar interesado en una cotización",
+            text: `Nombre: ${name}\nCorreo: ${email}\nPhone: ${phone}\nTipo de Seguro: ${seguro_info.name}\n Tipo de Seguro: ${seguro_info.name}` ,
+            html: `<p>Nombre: ${name}\\nCorreo: ${email}\\nPhone: ${phone}\\nTipo de Seguro: ${seguro_info.name}\\n Tipo de Seguro: ${seguro_info.name}</p>`
+        }
 
-    var mailOptions = {
-        from: "John mailOptions <me@mydomain.com>",
-        to: "alexandro4v@gmail.com",
-        subject: "Registration successful",
-        text: "You successfully registered an account at www.mydomain.com",
-        html: "<p>You successfully registered an account at www.mydomain.com</p>"
+    }else if (type === "Cotizador"){
+        mailOptions = {
+            from: "Bilt & Bac | Cotizador <info@bnbseguros.com>",
+            to: email,
+            subject: "Solicitud de Cotización",
+            text: `Nombre: ${name}\nCorreo: ${email}\nPhone: ${phone}\nTipo de Seguro: ${seguro_info.name}\n Tipo de Seguro: ${seguro_info.name}` ,
+            html: `<p>Nombre: ${name}\\nCorreo: ${email}\\nPhone: ${phone}\\nTipo de Seguro: ${seguro_info.name}\\n Tipo de Seguro: ${seguro_info.name}</p>`
+        }
     }
+
 
     transporter.sendMail(mailOptions, function (err, info) {
         if(err){
