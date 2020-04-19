@@ -4,7 +4,6 @@
 Acontinuación se encuentra la documentación de la 
 página web de Bilt & Bac
 
-
 Tecnologias Usadas
 ============
 Como parte de la arquitectura del software se utilizó Firebase, en especifico Firebase Functions, Realtime Database, y Hosting
@@ -26,6 +25,7 @@ Para Vue.js, se utilizó la capa [Vuetify](https://vuetifyjs.com/)
 
 **El dominio se encuentra direccionado a firebase hosting**
 
+Ejecución a Producción/local
 ==========
 Hay dos formas de ejecutar el código.
 1. Despliegue local:
