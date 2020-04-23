@@ -151,8 +151,6 @@
   import CotizarAhora from '../components/CotizarAhora'
   import Footer from '../components/Footer'
   import DialogContent from '../components/dialogs/DialogContent'
-
-
   export default {
     name: 'App',
     props:['step'],
@@ -178,11 +176,9 @@
         this.getSeguroSelected()
       },
       getSeguroSelected:function () {
-        //alert(this.$route.query.seguro)
         if (this.$route.query.seguro){
           this.querySeguro = this.$route.query.seguro
-        } else
-          return ""
+        } else return ""
       }
 
     },

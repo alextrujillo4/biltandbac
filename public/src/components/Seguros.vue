@@ -42,7 +42,7 @@
                             mdi-car
                         </v-icon>
                         <h1 :class='hover ? "headline ma-3 hover-active" : "headline  ma-3 local-white white--text"'>
-                            Seguro de Autos Individuales
+                           {{tiposeguros.autos}}
                         </h1>
                         <p :class='hover ? "text-start body-2  ma-4 hover-active" : " text-start body-2  ma-4 local-white "'>
                             Este seguro tiene por objeto, reparar o indemnizar
@@ -52,7 +52,7 @@
                         </p>
                     </v-card>
                 </v-hover>
-                <v-btn class="ma-3 btn" large color="accent" @click="moveStep('Seguros de Autos Individuales')">Cotizar</v-btn>
+                <v-btn class="ma-3 btn" large color="accent" @click="moveStep(tiposeguros.autos)">Cotizar</v-btn>
             </v-col>
             <v-col
                     class="text-center"
@@ -73,7 +73,7 @@
                             mdi-hospital-building
                         </v-icon>
                         <h1 :class='hover ? "headline ma-3 hover-active" : "headline  ma-3 local-white white--text"'>
-                            Seguros Gastos Médicos Mayores
+                            {{tiposeguros.medicosmayores}}
                         </h1>
                         <p :class='hover ? "text-start body-2  ma-4 hover-active" : " text-start body-2  ma-4 local-white white--text"'>
                             Te ofrecemos los servicios de
@@ -85,7 +85,7 @@
                         </p>
                     </v-card>
                 </v-hover>
-                <v-btn class="ma-3 btn" large color="accent" @click="moveStep('Seguro de Gastos Medicos')">Cotizar</v-btn>
+                <v-btn class="ma-3 btn" large color="accent" @click="moveStep(tiposeguros.medicosmayores)">Cotizar</v-btn>
             </v-col>
             <v-col
                     class="text-center"
@@ -107,7 +107,7 @@
                             mdi-shield-account
                         </v-icon>
                         <h1 :class='hover ? "headline ma-3 hover-active" : "headline  ma-3 local-white white--text"'>
-                            Seguros de Vida
+                            {{tiposeguros.vida}}
                         </h1>
                         <p :class='hover ? "text-start body-2  ma-4 hover-active" : " text-start body-2  ma-4 local-white white--text"'>
                             Te ofrecemos una solución financiera y patrimonial
@@ -117,7 +117,7 @@
                         </p>
                     </v-card>
                 </v-hover>
-                <v-btn class="ma-3 btn" large color="accent" @click="moveStep('Seguro de Vida')">Cotizar</v-btn>
+                <v-btn class="ma-3 btn" large color="accent" @click="moveStep(tiposeguros.vida)">Cotizar</v-btn>
             </v-col>
             <v-col class="text-center"
                    cols="12"
@@ -136,7 +136,7 @@
                             mdi-domain
                         </v-icon>
                         <h1 :class='hover ? "headline ma-3 hover-active" : "headline  ma-3 local-white white--text"'>
-                            Seguros Contra Daños
+                           {{tiposeguros.danios}}
                         </h1>
                         <p :class='hover ? "text-start body-2  ma-4 hover-active" : " text-start body-2  ma-4 local-white white--text "'>
                             Es un seguro que protege el patrimonio de tu empresa
@@ -146,20 +146,27 @@
                         </p>
                     </v-card>
                 </v-hover>
-                <v-btn class="ma-3 btn" large color="accent" @click="moveStep('Seguro Contra Daños')">Cotizar</v-btn>
+                <v-btn class="ma-3 btn" large color="accent" @click="moveStep(tiposeguros.danios)">Cotizar</v-btn>
             </v-col>
         </v-row>
     </v-container>
 </template>
 <script>
-
-    export default {name: 'App',
-    methods:{
-        moveStep(seguro){
-            this.$router.push("?seguro="+seguro);
-            this.$emit('stepChanged',true)
+    import data from "../credentials/constants.js";
+    export default {
+        name: 'App',
+        methods:{
+            moveStep(seguro){
+                this.$router.push("?seguro="+seguro);
+                this.$emit('stepChanged',true)
+            }
+        },
+        data: () => ({
+            tiposeguros: "",
+        }),
+        created() {
+            this.tiposeguros = data.seguros
         }
-    },
     }
 </script>
 

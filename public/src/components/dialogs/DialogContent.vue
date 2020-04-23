@@ -62,8 +62,7 @@
     import SeguroCasa from '../form/SeguroCasa';
     import SeguroMedico from '../form/SeguroMedico';
     import SeguroVida from '../form/SeguroVida';
-
-
+    import data from "../../credentials/constants.js"
     export default {
         props:['seguro'],
         components: {
@@ -79,14 +78,26 @@
             },
         },
         watch: {
-            seguro: function() {
-                this.itemSelected = this.seguro
+
+            seguro:{
+            immediate: true,
+            deep: true,
+             handler() {
+                 this.itemSelected = this.seguro
+                } ,
             },
         },
         data: () => ({
         itemSelected: "",
         sheet: false,
-        items: ['Seguros de Autos Individuales','Seguro de Autos Flotilla', 'Seguro Contra Daños', 'Seguro de Gastos Medicos', 'Seguro de Vida'],
-    }),
-  }
+            items: [
+                data.seguros.autos,
+                data.seguros.autosflotilla,
+                data.seguros.danios,
+                data.seguros.medicosmayores,
+                data.seguros.vida
+            ],
+
+        })
+    }
 </script>

@@ -241,6 +241,8 @@
     @import './src/styles/variables.scss';
 </style>
 <script>
+    import data from "../../credentials/constants";
+
     export default {
         data () {
             const defaultForm = Object.freeze({
@@ -329,7 +331,7 @@
                         { "phone": this.form.phone},
                         { "birthdate": this.form.birthdate},
                         { "seguro_info":{
-                                "type": "Seguros de Autos Individuales",
+                                "type": data.seguros.medicosmayores,
                                 "coverage": this.form.cobertura
                             }
                         },
@@ -374,7 +376,7 @@
                     "&weight="+this.form.weight +
                     "&height="+this.form.height +
 
-                    "&formType=" + "Seguro de Gastos Medicos"
+                    "&formType=" + data.seguros.medicosmayores
                 );
                 this.resetForm()
             },

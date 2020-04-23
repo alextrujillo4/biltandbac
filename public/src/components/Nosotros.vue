@@ -21,12 +21,11 @@
             </h1>
 
             <p class="body-1  ml-8 mr-8">
-              Somos un grupo con más de 20 años de experiencia a la asesoría en administración patrimonial y
-              administración de riesgos.
+                Somos un grupo con más de 20 años de experiencia a (en) la asesoría en administración patrimonial y administración de riesgos.
             </p>
             <p class="body-1  ml-8 mr-8">
-              Contamos con el convenio de aseguradoras y financiadoras reconocidas a nivelnacional, para ofrecerte
-              el mejor servicio.
+                Contamos con el convenio de aseguradoras y financiadoras reconocidas a nivelnacional , (nivel nacional,) para ofrecerte el mejor servicio.
+
             </p>
           </div>
             </v-layout>
