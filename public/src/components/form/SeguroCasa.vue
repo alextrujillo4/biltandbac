@@ -41,37 +41,19 @@
                         </v-text-field>
                     </v-col>
                     <!--Fecha-->
+                    <!--Fecha-->
                     <v-col class="d-flex"
                            cols="12"
                            lg="4"
                            md="4"
                            sm="12"
                            xl="4">
-                        <v-menu
-                                :close-on-content-click="false"
-                                :return-value.sync="date"
-                                min-width="290px"
-                                offset-y
-                                ref="menu"
-                                transition="scale-transition"
-                                v-model="form.birthdate"
-                        >
-                            <template v-slot:activator="{ on }">
-                                <v-text-field
-                                        append-icon="mdi-calendar"
-                                        filled
-                                        label="Fecha de nacimiento"
-                                        readonly
-                                        v-model="birthdate"
-                                        v-on="on"
-                                ></v-text-field>
-                            </template>
-                            <v-date-picker no-title scrollable v-model="birthdate">
-                                <v-spacer></v-spacer>
-                                <v-btn @click="menu = false" color="primary" text>Cancel</v-btn>
-                                <v-btn @click="$refs.menu.save(birthdate)" color="primary" text>OK</v-btn>
-                            </v-date-picker>
-                        </v-menu>
+                        <v-text-field
+                                append-icon="mdi-calendar"
+                                filled
+                                label="Fecha de nacimiento(dia/mes/año)"
+                                required
+                                v-model="form.birthdate"/>
                     </v-col>
                     <!--Correo electrónico-->
                     <v-col class="d-flex"
@@ -287,7 +269,7 @@
                 postalcode:'',
                 cobertura: '',
                 agreement: false,
-
+                birthdate:'',
                 location:'',
                 muro: '',
                 techo: '',
@@ -306,7 +288,7 @@
                     phone: [v => (v || '').length == 10 || 'Por favor, ingresa un teléfono válido'],
                     cobertura: v => !!v || 'Selecciona un Tipo de Cobertura',
                     email: [v => (v || '').length > 0 ||(v || '').match(/@/) || 'Por favor, ingresa un correo electrónico válido'],
-
+                    birthdate: v => !!v || 'Ingresa tu fecha de nacimiento d/mes/año',
                     location: v => !!v || 'Este campo es requerido',
                     muro: v => !!v || 'Este campo es requerido',
                     techo: v => !!v || 'Este campo es requerido',
@@ -321,12 +303,11 @@
                     payment: "",
                     phone:'',
                     email:'',
+                    birthdate:'',
                     description:'',
                     postalcode:'',
                     cobertura: '',
                     agreement: false,
-
-
                     location:'',
                     muro: '',
                     techo: '',
@@ -334,7 +315,6 @@
                     suma: '',
 
                 }),
-                birthdate: new Date().toISOString().substr(0, 10),
                 checkbox: false,
                 payment_list: ["Anual", "Semestral", "Trimestral", "Mensual"],
                 cobertura_list: ["Seguro Casa + Plus", "Seguro PYME"],
@@ -350,7 +330,7 @@
                     this.form.phone &&
                     this.form.payment &&
                     this.form.cobertura&&
-
+                    this.form.birthdate &&
                     this.form.location&&
                     this.form.muro&&
                     this.form.techo&&
@@ -368,7 +348,7 @@
                         { "name": this.form.firstname + " " + this.form.lastname},
                         { "email": this.form.email},
                         { "phone": this.form.phone},
-                        { "birthdate": this.birthdate},
+                        { "birthdate": this.form.birthdate},
                         { "seguro_info":{
                                 "type": data.seguros.autos,
                                 "coverage": this.form.cobertura
@@ -404,14 +384,13 @@
                     "&lastname="+this.form.lastname +
                     "&email="+this.form.email +
                     "&phone="+this.form.phone +
-                    "&birthdate="+this.birthdate +
+                    "&birthdate="+this.form.birthdate +
                     "&postalcode="+this.form.postalcode +
                     "&brand="+this.form.brand +
                     "&payment="+this.form.payment +
                     "&cobertura="+this.form.cobertura +
                     "&agreement="+this.form.agreement +
                     "&description="+this.form.description +
-
                     "&location="+this.form.location +
                     "&muro="+this.form.muro +
                     "&techo="+this.form.techo +
