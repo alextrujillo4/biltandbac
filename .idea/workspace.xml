@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="161d7063-4807-4502-bcca-c7a9d5ae132e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/css/app.fe349d20.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/css/chunk-vendors.c3bdbea6.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/app.57dbc874.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/app.57dbc874.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/Footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/components/form/SeguroAutos.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/form/SeguroAutos.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +102,7 @@
       <workItem from="1587316513598" duration="199000" />
       <workItem from="1587316717008" duration="9733000" />
       <workItem from="1587672185969" duration="9317000" />
-      <workItem from="1587696132882" duration="4264000" />
+      <workItem from="1587696132882" duration="4863000" />
     </task>
     <servers />
   </component>

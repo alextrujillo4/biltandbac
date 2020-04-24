@@ -48,31 +48,12 @@
                            md="4"
                            sm="12"
                            xl="4">
-                        <v-menu
-                                :close-on-content-click="false"
-                                :return-value.sync="date"
-                                min-width="290px"
-                                offset-y
-                                ref="menu"
-                                transition="scale-transition"
-                                v-model="form.birthdate"
-                        >
-                            <template v-slot:activator="{ on }">
                                 <v-text-field
-                                        append-icon="mdi-calendar"
-                                        filled
-                                        label="Fecha de nacimiento"
-                                        readonly
-                                        v-model="form.birthdate"
-                                        v-on="on"
-                                ></v-text-field>
-                            </template>
-                            <v-date-picker no-title scrollable v-model="birthdate">
-                                <v-spacer></v-spacer>
-                                <v-btn @click="menu = false" color="primary" text>Cancel</v-btn>
-                                <v-btn @click="$refs.menu.save(birthdate)" color="primary" text>OK</v-btn>
-                            </v-date-picker>
-                        </v-menu>
+                                    append-icon="mdi-calendar"
+                                    filled
+                                    label="Fecha de nacimiento(dia/mes/año)"
+                                    required
+                                    v-model="form.birthdate"/>
                     </v-col>
                     <!--Correo electrónico-->
                     <v-col class="d-flex"
@@ -108,14 +89,14 @@
                     <!--======Datos del Bien a Cotizar=======-->
                     <!--=====================================-->
                     <v-col class="d-flex" cols="12">
-                        <p>Datos del Bien a Cotizar</p>
+                        <p>Datos del Automóvil</p>
                     </v-col>
                     <!--Tipo de Covertura-->
                     <v-col class="d-flex"
                            cols="12"
-                           xl="4"
-                           lg="4"
-                           md="4"
+                           xl="3"
+                           lg="3"
+                           md="3"
                            sm="12">
                         <v-radio-group
                                 :rules="rules.cobertura"
@@ -137,10 +118,10 @@
                     <!--Código postal-->
                     <v-col class="d-flex"
                            cols="12"
+                           xl="3"
                            lg="3"
                            md="3"
-                           sm="12"
-                           xl="3">
+                           sm="12">
                         <v-text-field
                                 :counter="5"
                                 :rules="rules.postalcode"
@@ -152,10 +133,10 @@
                     <!--brand-->
                     <v-col class="d-flex"
                            cols="12"
+                           xl="3"
                            lg="3"
                            md="3"
-                           sm="12"
-                           xl="3">
+                           sm="12">
                         <v-text-field
                                 :counter="40"
                                 :rules="rules.brand"
@@ -163,6 +144,19 @@
                                 label="Marca del Automóvil"
                                 required
                                 v-model="form.brand"></v-text-field>
+                    </v-col>
+                    <v-col class="d-flex"
+                           cols="12"
+                           xl="3"
+                           lg="3"
+                           md="3"
+                           sm="12">
+                        <v-text-field
+                                :rules="rules.modelyear"
+                                filled
+                                label="Modelo del Auto (Año)"
+                                required
+                                v-model="form.modelyear"></v-text-field>
                     </v-col>
                     <!--Descripción-->
                     <v-col class="d-flex"
@@ -174,7 +168,7 @@
                         <v-textarea
                                 :counter="2000"
                                 filled
-                                label="Descripción de la unidad"
+                                label="Descripción"
                                 v-model="form.description"></v-textarea>
 
                     </v-col>
@@ -253,9 +247,11 @@
                 payment: "",
                 phone:'',
                 email:'',
+                modelyear:'',
                 description:'',
                 postalcode:'',
                 cobertura: '',
+                birthdate:'',
                 agreement: false,
             })
             return {
@@ -264,12 +260,13 @@
                     postalcode: [val => (val || '').length > 0 || 'Ingresa un Código Postal'],
                     firstname: [val => (val || '').length > 0 || 'Es requerido el Nombre'],
                     lastname: [val => (val || '').length > 0 || 'Es requerido el Apellido'],
+                    modelyear: [val => (val || '').length > 0 || 'Es requerido el Año del modelo'],
                     brand: [val => (val || '').length > 0 || 'Ingresa la Marca del Autóvil'],
                     agreement: v => !!v || 'Esto es requerido',
                     payment: v => !!v || 'Selecciona una forma de pago',
                     phone: [v => (v || '').length == 10 || 'Por favor, ingresa un teléfono válido'],
                     cobertura: v => !!v || 'Selecciona un Tipo de Cobertura',
-
+                    birthdate: v => !!v || 'Ingresa tu fecha de nacimiento d/mes/año',
                     email: [v => (v || '').length > 0 ||(v || '').match(/@/) || 'Por favor, ingresa un correo electrónico válido'],
                 },
                 defaultForm: Object.freeze({
@@ -279,13 +276,14 @@
                     payment: "",
                     phone:'',
                     email:'',
+                    modelyear:'',
                     postalcode:'',
                     agreement: false,
                     cobertura: '',
-                    description: ''
+                    description: '',
+                    birthdate:''
 
                 }),
-                birthdate: new Date().toISOString().substr(0, 10),
                 checkbox: false,
                 payment_list: ["Anual", "Semestral", "Trimestral", "Mensual"],
                 cobertura_list: ["Cobertura Amplia", "Cobertura Limitada", "Cobertura Responsabilidad Civil"],
@@ -300,9 +298,11 @@
                     this.form.email &&
                     this.form.phone &&
                     this.form.postalcode &&
+                    this.form.birthdate &&
                     this.form.brand &&
                     this.form.payment &&
-                    this.form.cobertura&&
+                    this.form.cobertura &&
+                    this.form.modelyear &&
                     this.form.agreement
                 )
             }
@@ -315,10 +315,11 @@
                         { "name": this.form.firstname + " " + this.form.lastname},
                         { "email": this.form.email},
                         { "phone": this.form.phone},
-                        { "birthdate": this.birthdate},
+                        { "birthdate": this.form.birthdate},
                         { "seguro_info":{
                                         "type": data.seguros.autos,
-                                        "coverage": this.form.cobertura
+                                        "coverage": this.form.cobertura,
+                                        "modelyear": this.form.modelyear
                                         }
                         },
                     ]
@@ -351,13 +352,14 @@
                     "&lastname="+this.form.lastname +
                     "&email="+this.form.email +
                     "&phone="+this.form.phone +
-                    "&birthdate="+this.birthdate +
+                    "&birthdate="+this.form.birthdate +
                     "&postalcode="+this.form.postalcode +
                     "&brand="+this.form.brand +
                     "&payment="+this.form.payment +
                     "&cobertura="+this.form.cobertura +
                     "&agreement="+this.form.agreement +
                     "&description="+this.form.description +
+                    "&modelyear=" + this.form.modelyear +
                     "&formType=" + data.seguros.autos
                 );
                 this.resetForm()
