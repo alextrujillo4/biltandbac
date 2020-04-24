@@ -41,38 +41,19 @@
                                 v-model="form.lastname">
                         </v-text-field>
                     </v-col>
-                    <!--Fecha Nacimiento-->
+                    <!--Fecha-->
                     <v-col class="d-flex"
                            cols="12"
                            lg="4"
                            md="4"
                            sm="12"
                            xl="4">
-                        <v-menu
-                                :close-on-content-click="false"
-                                :return-value.sync="date"
-                                min-width="290px"
-                                offset-y
-                                ref="menu"
-                                transition="scale-transition"
-                                v-model="form.birthdate"
-                        >
-                            <template v-slot:activator="{ on }">
-                                <v-text-field
-                                        append-icon="mdi-calendar"
-                                        filled
-                                        label="Fecha de nacimiento"
-                                        readonly
-                                        v-model="birthdate"
-                                        v-on="on"
-                                ></v-text-field>
-                            </template>
-                            <v-date-picker no-title scrollable v-model="birthdate">
-                                <v-spacer></v-spacer>
-                                <v-btn @click="menu = false" color="primary" text>Cancel</v-btn>
-                                <v-btn @click="$refs.menu.save(birthdate)" color="primary" text>OK</v-btn>
-                            </v-date-picker>
-                        </v-menu>
+                        <v-text-field
+                                append-icon="mdi-calendar"
+                                filled
+                                label="Fecha de nacimiento(dia/mes/año)"
+                                required
+                                v-model="form.birthdate"/>
                     </v-col>
                     <!--Correo electrónico-->
                     <v-col class="d-flex"
@@ -269,7 +250,7 @@
                 description:'',
                 postalcode:'',
                 agreement: false,
-
+                birthdate:'',
                 gender:'',
                 weight:'',
                 height:'',
@@ -286,7 +267,7 @@
                     payment: v => !!v || 'Selecciona una forma de pago',
                     phone: [v => (v || '').length == 10 || 'Por favor, ingresa un teléfono válido'],
                     email: [v => (v || '').length > 0 ||(v || '').match(/@/) || 'Por favor, ingresa un correo electrónico válido'],
-
+                    birthdate: v => !!v || 'Ingresa tu fecha de nacimiento d/mes/año',
                     gender: v => !!v || 'Esto es requerido',
                     weight: v => !!v || 'Esto es requerido',
                     height: v => !!v || 'Esto es requerido',
@@ -298,21 +279,18 @@
                     lastname: '',
                     phone:'',
                     email:'',
-
+                    birthdate:'',
                     payment: "",
                     brand: '',
-
                     postalcode:'',
                     agreement: false,
                     description: '',
-
                     gender:'',
                     weight:'',
                     height:'',
                     paymentcapacity:''
 
                 }),
-                birthdate: new Date().toISOString().substr(0, 10),
                 checkbox: false,
                 payment_list: ["Anual", "Semestral", "Trimestral", "Mensual"],
                 gender_list: ["Mujer", "Hombre", "Otro"],
@@ -326,14 +304,12 @@
                     this.form.lastname &&
                     this.form.email &&
                     this.form.phone &&
-
+                    this.form.birthdate &&
                     this.form.gender &&
                     this.form.weight &&
                     this.form.height &&
-
                     this.form.payment &&
                     this.form.agreement &&
-
                     this.form.paymentcapacity
                 )
             }
@@ -346,7 +322,7 @@
                         { "name": this.form.firstname + " " + this.form.lastname},
                         { "email": this.form.email},
                         { "phone": this.form.phone},
-                        { "birthdate": this.birthdate},
+                        { "birthdate": this.form.birthdate},
                         { "seguro_info":{
                                 "type": data.seguros.vida,
                                 "coverage": this.form.cobertura
@@ -382,19 +358,16 @@
                     "&lastname="+this.form.lastname +
                     "&email="+this.form.email +
                     "&phone="+this.form.phone +
-                    "&birthdate="+this.birthdate +
+                    "&birthdate="+this.form.birthdate +
                     "&postalcode="+this.form.postalcode +
                     "&brand="+this.form.brand +
                     "&payment="+this.form.payment +
                     "&agreement="+this.form.agreement +
                     "&description="+this.form.description +
-
                     "&gender="+this.form.gender +
                     "&weight="+this.form.weight +
                     "&height="+this.form.height +
-
                     "&paymentcapacity="+this.form.paymentcapacity +
-
                     "&formType=" + data.seguros.vida
                 );
                 this.resetForm()
