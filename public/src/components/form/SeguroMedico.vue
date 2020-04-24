@@ -329,7 +329,7 @@
                         { "name": this.form.firstname + " " + this.form.lastname},
                         { "email": this.form.email},
                         { "phone": this.form.phone},
-                        { "birthdate": this.form.birthdate},
+                        { "birthdate": this.birthdate},
                         { "seguro_info":{
                                 "type": data.seguros.medicosmayores,
                                 "coverage": this.form.cobertura

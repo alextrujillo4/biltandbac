@@ -74,8 +74,7 @@
                                 Tarifas Atractivas
                             </v-card-title>
                             <v-card-subtitle class="body-1 ma-2">
-                                Te ofrecemos las tarifas más atractivas y disponemos de descuentos adicionales en seguros para vehículos automoviles
-                            </v-card-subtitle>
+                                Te ofrecemos las tarifas más atractivas y disponemos de descuentos adicionales en los Seguros de Automóviles.                            </v-card-subtitle>
                         </div>
                     </v-layout>
                 </v-card>
@@ -107,8 +106,7 @@
                                 Nos importas
                             </v-card-title>
                             <v-card-subtitle class="body-1 ma-2">
-                                Planes de alta profección y rendimiento para
-                                a mantener la calidad de vida y estabilidad en las familias.
+                                Planes de alta protección y rendimiento para mantener la calidad de vida y estabilidad en las familias.
                             </v-card-subtitle>
                         </div>
                     </v-layout>

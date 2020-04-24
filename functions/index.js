@@ -37,7 +37,19 @@ app.post('/hello', (req, res) => {
         }
     });
     var mailOptions = null;
-    if (variable === "Automatic"){
+    if (variable === "Home") {
+        var mailbody = seguro_info.body
+        var mailsubject = seguro_info.subject
+        mailOptions = {
+            from: "Bilt&Bac | Mensaje Desde Web <info@bnbseguros.com>",
+            to: "plara@bnbseguros.com",
+            subject: mailsubject,
+            text: mailbody ,
+            html: `<p style="font-size:large">${mailbody}</p>
+                   <p style="font-size:large">Cliente: ${name}<br>eMail: ${email}</p>`
+        }
+
+    }else if (variable === "Automatic"){
          mailOptions = {
             from: "Bilt&Bac | Mensaje Automático <info@bnbseguros.com>",
             to: "plara@bnbseguros.com",

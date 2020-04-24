@@ -9,72 +9,30 @@
         </h1>
       </v-col>
     </v-row>
-    <v-row>
+    <v-row
+            align="center"
+            justify="center">
       <v-col
-              cols="6"
-              lg="2"
-              xl="2"
+              cols="12"
+              lg="4"
+              xl="4"
               md="4"
-              sm="6">
-        <v-img
-                src="../assets/companies/Atlas.png"
-                aspect-ratio="1"
-        class="ma-4"/>
-      </v-col>
-      <v-col
-              cols="6"
-              lg="2"
-              xl="2"
-              md="4"
-              sm="6">
+              sm="12">
         <v-img
                 src="../assets/companies/GNP.png"
                 aspect-ratio="1"
-        class="ma-4"/>
+                class="ml-12 mr-12"/>
       </v-col>
       <v-col
-              cols="6"
-              lg="2"
-              xl="2"
+              cols="12"
+              lg="4"
+              xl="4"
               md="4"
-              sm="6">
+              sm="12">
         <v-img
                 src="../assets/companies/Afirme.png"
                 aspect-ratio="1"
-        class="ma-4"/>
-      </v-col>
-      <v-col
-              cols="6"
-              lg="2"
-              xl="2"
-              md="4"
-              sm="6">
-        <v-img
-                src="../assets/companies/Mapfre.png"
-                aspect-ratio="1"
-        class="ma-4"/>
-      </v-col>
-      <v-col
-              cols="6"
-              lg="2"
-              xl="2"
-              md="4"
-              sm="6">
-        <v-img
-                src="../assets/companies/AXA.png"
-                aspect-ratio="1"
-        class="ma-4"/>
-      </v-col>
-      <v-col
-              cols="6"
-              lg="2"
-              xl="2"
-              md="4"
-              sm="6">
-        <v-img
-                src="../assets/companies/Bupa.png"
-                aspect-ratio="1"
-        class="ma-4"/>
+                class="ml-12 mr-12"/>
       </v-col>
     </v-row>
     <v-row>
@@ -145,34 +103,75 @@
                 class="ma-4"/>
       </v-col>
     </v-row>
-      <v-row
-              align="center"
-              justify="center">
-        <v-col
-                cols="6"
-                lg="2"
-                xl="2"
-                md="4"
-                sm="6">
-          <v-img
-                  src="../assets/companies/HDIseguros.png"
-                  aspect-ratio="1"
-                  class="ma-4"/>
-        </v-col>
+    <v-row>
+      <v-col
+              cols="6"
+              lg="2"
+              xl="2"
+              md="4"
+              sm="6">
+        <v-img
+                src="../assets/companies/HDIseguros.png"
+                aspect-ratio="1"
+                class="ma-4"/>
+      </v-col>
 
-        <v-col
-                cols="6"
-                lg="2"
-                xl="2"
-                md="4"
-                sm="6">
-          <v-img
-                  src="../assets/companies/BanorteSeguros.png"
-                  aspect-ratio="1"
-                  class="ma-4"/>
-        </v-col>
-
-      </v-row>
+      <v-col
+              cols="6"
+              lg="2"
+              xl="2"
+              md="4"
+              sm="6">
+        <v-img
+                src="../assets/companies/BanorteSeguros.png"
+                aspect-ratio="1"
+                class="ma-4"/>
+      </v-col>
+      <v-col
+              cols="6"
+              lg="2"
+              xl="2"
+              md="4"
+              sm="6">
+        <v-img
+                src="../assets/companies/Atlas.png"
+                aspect-ratio="1"
+        class="ma-4"/>
+      </v-col>
+      <v-col
+              cols="6"
+              lg="2"
+              xl="2"
+              md="4"
+              sm="6">
+        <v-img
+                src="../assets/companies/Mapfre.png"
+                aspect-ratio="1"
+        class="ma-4"/>
+      </v-col>
+      <v-col
+              cols="6"
+              lg="2"
+              xl="2"
+              md="4"
+              sm="6">
+        <v-img
+                src="../assets/companies/AXA.png"
+                aspect-ratio="1"
+        class="ma-4"/>
+      </v-col>
+      <v-col
+              cols="6"
+              lg="2"
+              xl="2"
+              md="4"
+              sm="6">
+        <v-img
+                src="../assets/companies/Bupa.png"
+                aspect-ratio="1"
+        class="ma-4"/>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 

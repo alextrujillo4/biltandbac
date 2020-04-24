@@ -244,7 +244,6 @@
 </style>
 <script>
     import data from "../../credentials/constants.js";
-
     export default {
         data () {
             const defaultForm = Object.freeze({
@@ -316,7 +315,7 @@
                         { "name": this.form.firstname + " " + this.form.lastname},
                         { "email": this.form.email},
                         { "phone": this.form.phone},
-                        { "birthdate": this.form.birthdate},
+                        { "birthdate": this.birthdate},
                         { "seguro_info":{
                                         "type": data.seguros.autos,
                                         "coverage": this.form.cobertura
