@@ -48,31 +48,12 @@
                            md="4"
                            sm="12"
                            xl="4">
-                        <v-menu
-                                :close-on-content-click="false"
-                                :return-value.sync="date"
-                                min-width="290px"
-                                offset-y
-                                ref="menu"
-                                transition="scale-transition"
-                                v-model="form.birthdate"
-                        >
-                            <template v-slot:activator="{ on }">
-                                <v-text-field
-                                        append-icon="mdi-calendar"
-                                        filled
-                                        label="Fecha de nacimiento"
-                                        readonly
-                                        v-model="birthdate"
-                                        v-on="on"
-                                ></v-text-field>
-                            </template>
-                            <v-date-picker no-title scrollable v-model="birthdate">
-                                <v-spacer></v-spacer>
-                                <v-btn @click="menu = false" color="primary" text>Cancel</v-btn>
-                                <v-btn @click="$refs.menu.save(birthdate)" color="primary" text>OK</v-btn>
-                            </v-date-picker>
-                        </v-menu>
+                        <v-text-field
+                                append-icon="mdi-calendar"
+                                filled
+                                label="Fecha de nacimiento(dia/mes/año)"
+                                required
+                                v-model="form.birthdate"/>
                     </v-col>
                     <!--Correo electrónico-->
                     <v-col class="d-flex"
@@ -188,6 +169,7 @@
                 description:'',
                 postalcode:'',
                 cobertura: '',
+                birthdate:'',
                 agreement: false,
             })
             return {
@@ -201,7 +183,7 @@
                     payment: v => !!v || 'Selecciona una forma de pago',
                     phone: [v => (v || '').length == 10 || 'Por favor, ingresa un teléfono válido'],
                     cobertura: v => !!v || 'Selecciona un Tipo de Cobertura',
-
+                    birthdate: v => !!v || 'Ingresa tu fecha de nacimiento d/mes/año',
                     email: [v => (v || '').length > 0 ||(v || '').match(/@/) || 'Por favor, ingresa un correo electrónico válido'],
                 },
                 defaultForm: Object.freeze({
@@ -214,10 +196,10 @@
                     postalcode:'',
                     agreement: false,
                     cobertura: '',
+                    birthdate:'',
                     description: ''
 
                 }),
-                birthdate: new Date().toISOString().substr(0, 10),
                 checkbox: false,
                 payment_list: ["Anual", "Semestral", "Trimestral", "Mensual"],
                 cobertura_list: ["Cobertura Amplia", "Cobertura Limitada", "Cobertura Responsabilidad Civil"],
@@ -230,6 +212,7 @@
                     this.form.firstname &&
                     this.form.lastname &&
                     this.form.email &&
+                    this.form.birthdate &&
                     this.form.phone &&
                     this.form.agreement
                 )
@@ -243,7 +226,7 @@
                         { "name": this.form.firstname + " " + this.form.lastname},
                         { "email": this.form.email},
                         { "phone": this.form.phone},
-                        { "birthdate": this.birthdate},
+                        { "birthdate": this.form.birthdate},
                         { "seguro_info":{
                                 "type": data.seguros.autosflotilla,
                                 "coverage": this.form.cobertura
