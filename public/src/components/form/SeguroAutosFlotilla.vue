@@ -51,6 +51,7 @@
                         <v-text-field
                                 append-icon="mdi-calendar"
                                 filled
+                                :rules="rules.birthdate"
                                 label="Fecha de nacimiento(dia/mes/año)"
                                 required
                                 v-model="form.birthdate"/>
@@ -155,7 +156,7 @@
     @import './src/styles/variables.scss';
 </style>
 <script>
-    import data from "../../credentials/constants";
+    import dataf from "../../credentials/constants";
 
     export default {
         data () {
@@ -228,8 +229,8 @@
                         { "phone": this.form.phone},
                         { "birthdate": this.form.birthdate},
                         { "seguro_info":{
-                                "type": data.seguros.autosflotilla,
-                                "coverage": this.form.cobertura
+                                "type": dataf.seguros.autosflotilla,
+                                "description": this.form.description,
                             }
                         },
                     ]
@@ -262,14 +263,14 @@
                     "&lastname="+this.form.lastname +
                     "&email="+this.form.email +
                     "&phone="+this.form.phone +
-                    "&birthdate="+this.birthdate +
+                    "&birthdate="+this.form.birthdate +
                     "&postalcode="+this.form.postalcode +
                     "&brand="+this.form.brand +
                     "&payment="+this.form.payment +
                     "&cobertura="+this.form.cobertura +
                     "&agreement="+this.form.agreement +
                     "&description="+this.form.description +
-                    "&formType=" + data.seguros.autosflotilla
+                    "&formType=" + dataf.seguros.autosflotilla
                 );
                 this.resetForm()
             },

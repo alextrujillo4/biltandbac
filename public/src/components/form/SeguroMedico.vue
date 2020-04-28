@@ -223,7 +223,7 @@
     @import './src/styles/variables.scss';
 </style>
 <script>
-    import data from "../../credentials/constants";
+    import dataf from "../../credentials/constants";
 
     export default {
         data () {
@@ -309,8 +309,13 @@
                         { "phone": this.form.phone},
                         { "birthdate": this.form.birthdate},
                         { "seguro_info":{
-                                "type": data.seguros.medicosmayores,
-                                "coverage": this.form.cobertura
+                                "type": dataf.seguros.medicosmayores,
+                                "coverage": this.form.cobertura,
+                                "postalcode": this.form.postalcode,
+                                "gender": this.form.gender,
+                                "weight": this.form.weight,
+                                "height": this.form.height,
+                                "payment": this.form.payment
                             }
                         },
                     ]
@@ -352,7 +357,7 @@
                     "&gender="+this.form.gender +
                     "&weight="+this.form.weight +
                     "&height="+this.form.height +
-                    "&formType=" + data.seguros.medicosmayores
+                    "&formType=" + dataf.seguros.medicosmayores
                 );
                 this.resetForm()
             },

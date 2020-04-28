@@ -254,7 +254,7 @@
     @import './src/styles/variables.scss';
 </style>
 <script>
-    import data from "../../credentials/constants";
+    import dataf from "../../credentials/constants";
 
     export default {
         data () {
@@ -350,8 +350,13 @@
                         { "phone": this.form.phone},
                         { "birthdate": this.form.birthdate},
                         { "seguro_info":{
-                                "type": data.seguros.autos,
-                                "coverage": this.form.cobertura
+                                "type": dataf.seguros.autos,
+                                "coverage": this.form.cobertura,
+                                "muro": this.form.muro,
+                                "techo": this.form.techo,
+                                "pisos": this.form.pisos,
+                                "suma": this.form.suma,
+                                "payment": this.form.payment
                             }
                         },
                     ]
@@ -396,8 +401,7 @@
                     "&techo="+this.form.techo +
                     "&pisos="+this.form.pisos +
                     "&suma="+this.form.suma +
-
-                    "&formType=" + data.seguros.danios
+                    "&formType=" + dataf.seguros.danios
                 );
                 this.resetForm()
             },

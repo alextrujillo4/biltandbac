@@ -148,13 +148,24 @@
                 formType: "",
                 cobertura: "",
                 payment: "",
+                paymentcapacity: "",
                 brand: "",
                 products_data: [],
                 seguro: "",
-                user: "",
+                user: [],
                 phone: "",
                 birthdate: "",
-                variable:""
+                variable:"",
+                gender:"",
+                height:"",
+                weight:"",
+                postalcode:"",
+                muro:"",
+                techo:"",
+                pisos:"",
+                suma:"",
+                modelyear:"",
+                description:""
             }
         },
         created() {
@@ -167,20 +178,46 @@
             this.cobertura = this.$route.query.cobertura
             this.payment = this.$route.query.payment
             this.brand = this.$route.query.brand
+            this.modelyear = this.$route.query.modelyear
             this.seguro = this.$route.query.seguro
+            this.paymentcapacity = this.$route.query.paymentcapacity
+            this.gender = this.$route.query.gender
+            this.height = this.$route.query.height
+            this.weight = this.$route.query.weight
+            this.description = this.$route.query.description
+            this.muro = this.$route.query.muro
+            this.techo = this.$route.query.techo
+            this.pisos = this.$route.query.pisos
+            this.suma = this.$route.query.suma
+            this.postalcode = this.$route.query.postalcode
             this.variable = "Cotizador"
             this.user= [
-                {variable: this.variable},
+                {variable: "Cotizador"},
                 {name: this.name},
                 {email: this.email},
                 {phone: this.phone},
                 {birthdate: this.birthdate},
                 {seguro_info: {
                         type: this.formType,
-                        coverage: this.cobertura
+                        coverage: this.cobertura,
+                        payment:this.payment,
+                        paymentcapacity: this.paymentcapacity,
+                        gender: this.gender,
+                        height: this.height,
+                        weight: this.weight,
+                        postalcode: this.postalcode,
+                        muro: this.muro,
+                        techo: this.techo,
+                        pisos: this.pisos,
+                        suma: this.suma,
+                        brand: this.brand,
+                        modelyear: this.modelyear,
+                        description: this.description
                     }
                 }
             ]
+
+            console.log(this.user)
         },
         mounted() {
             this.getProducts()

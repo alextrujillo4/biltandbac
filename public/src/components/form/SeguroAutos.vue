@@ -237,7 +237,7 @@
     @import './src/styles/variables.scss';
 </style>
 <script>
-    import data from "../../credentials/constants.js";
+    import dataf from "../../credentials/constants.js";
     export default {
         data () {
             const defaultForm = Object.freeze({
@@ -317,10 +317,14 @@
                         { "phone": this.form.phone},
                         { "birthdate": this.form.birthdate},
                         { "seguro_info":{
-                                        "type": data.seguros.autos,
-                                        "coverage": this.form.cobertura,
-                                        "modelyear": this.form.modelyear
-                                        }
+                                "type": dataf.seguros.autos,
+                                "coverage": this.form.cobertura,
+                                "postalcode": this.form.postalcode,
+                                "brand": this.form.brand,
+                                "modelyear": this.form.modelyear,
+                                "description": this.form.description,
+                                "payment": this.form.payment,
+                            }
                         },
                     ]
                 });
@@ -360,7 +364,7 @@
                     "&agreement="+this.form.agreement +
                     "&description="+this.form.description +
                     "&modelyear=" + this.form.modelyear +
-                    "&formType=" + data.seguros.autos
+                    "&formType=" + dataf.seguros.autos
                 );
                 this.resetForm()
             },

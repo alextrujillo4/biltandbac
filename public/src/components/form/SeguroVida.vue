@@ -236,7 +236,7 @@
     @import './src/styles/variables.scss';
 </style>
 <script>
-    import data from "../../credentials/constants";
+    import dataf from "../../credentials/constants";
 
     export default {
         data () {
@@ -324,8 +324,14 @@
                         { "phone": this.form.phone},
                         { "birthdate": this.form.birthdate},
                         { "seguro_info":{
-                                "type": data.seguros.vida,
-                                "coverage": this.form.cobertura
+                                "type": dataf.seguros.vida,
+                                "payment": this.form.payment,
+                                "paymentcapacity": this.form.paymentcapacity,
+                                "gender": this.form.gender,
+                                "weight": this.form.weight,
+                                "height": this.form.height,
+                                "description": this.form.description,
+
                             }
                         },
                     ]
@@ -337,11 +343,9 @@
                             'Access-Control-Allow-Origin': '*'
                         }})
                     .then(response => {
-                        console.log("Message Sent.")
                         console.log(response)
                     })
                     .catch( err => {
-                        console.log("Ups.. Error D':")
                         console.log(err)
                     })
 
@@ -368,7 +372,7 @@
                     "&weight="+this.form.weight +
                     "&height="+this.form.height +
                     "&paymentcapacity="+this.form.paymentcapacity +
-                    "&formType=" + data.seguros.vida
+                    "&formType=" + dataf.seguros.vida
                 );
                 this.resetForm()
             },

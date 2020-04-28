@@ -103,11 +103,10 @@
                                 >
                                    mdi-home-heart
                                 </v-icon>
-                                Nos importas
+                                Exito
                             </v-card-title>
                             <v-card-subtitle class="body-1 ma-2">
-                                Planes de alta protección y rendimiento para mantener la calidad de vida y estabilidad en las familias.
-                            </v-card-subtitle>
+                                Creemos que el éxito permanente se alcanza a través del trabajo en equipo, esfuerzo y realizando nuestras actividades diarias con entusiasmo y honestidad.                            </v-card-subtitle>
                         </div>
                     </v-layout>
                 </v-card>

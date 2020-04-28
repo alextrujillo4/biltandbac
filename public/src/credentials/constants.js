@@ -1,10 +1,10 @@
 
 var seguros = {
-    autos: "Seguro de Autos Individuales",
+    autos: "Seguro de Autos",
     autosflotilla: "Seguro de Autos Flotilla",
     vida: 'Seguro de Vida',
     danios: 'Seguro Contra Daños',
-    medicosmayores: 'Seguros Gastos Médicos Mayores',
+    medicosmayores: 'Seguro de Gastos Médicos Mayores',
 
 };
 

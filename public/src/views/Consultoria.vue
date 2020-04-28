@@ -18,7 +18,7 @@
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn
                 text
-                class="btn" to="/">Inicio</v-btn>
+                class="btn" to="/" >Inicio</v-btn>
         <v-btn
                 text
                 class="btn" @click="$vuetify.goTo('#Footer')">Contacto</v-btn>
