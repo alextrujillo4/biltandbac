@@ -91,7 +91,7 @@
                     <v-col class="d-flex" cols="12">
                         <p>Más información</p>
                     </v-col>
-                    <!--Código postal-->
+                    <!--Capacidad de pago anual-->
                     <v-col class="d-flex"
                            cols="12"
                            lg="3"
@@ -106,8 +106,7 @@
                                 v-model="form.paymentcapacity"></v-text-field>
                     </v-col>
 
-                    <!--Genero-->
-                    <!--Forma de pago-->
+                    <!--Duracion del seguro [timelapse]-->
                     <v-col class="d-flex"
                            cols="12"
                            lg="3"
@@ -115,14 +114,18 @@
                            sm="12"
                            xl="3">
                         <v-select
-                                :items="gender_list"
+                                :items="timelapse_list"
                                 filled
-                                :rules="rules.gender"
+                                :rules="rules.timelapse"
                                 required
-                                label="Genero"
+                                label="Duración del seguro"
                                 single-line
-                                v-model="form.gender"></v-select>
+                                v-model="form.timelapse"></v-select>
                     </v-col>
+
+
+
+
                     <!--Peso (weight)-->
                     <v-col class="d-flex"
                            cols="12"
@@ -154,13 +157,47 @@
                                 v-model="form.height"></v-text-field>
                     </v-col>
 
+                    <!--Genero-->
+                    <v-col class="d-flex"
+                           cols="12"
+                           xl="4"
+                           lg="4"
+                           md="4"
+                           sm="12">
+                        <v-select
+                                :items="gender_list"
+                                filled
+                                :rules="rules.gender"
+                                required
+                                label="Genero"
+                                single-line
+                                v-model="form.gender"></v-select>
+                    </v-col>
+
+                    <!--Tipo seguro de vida (coverage)-->
+                    <v-col class="d-flex"
+                           cols="12"
+                           xl="4"
+                           lg="4"
+                           md="4"
+                           sm="12">
+                        <v-select
+                                :items="coverage_list"
+                                filled
+                                :rules="rules.coverage"
+                                required
+                                label="Selecciona un tipo de seguro de vida"
+                                single-line
+                                v-model="form.coverage"></v-select>
+                    </v-col>
+
                     <!--Forma de pago-->
                     <v-col class="d-flex"
                            cols="12"
-                           lg="12"
-                           md="12"
-                           sm="12"
-                           xl="12">
+                           xl="4"
+                           lg="4"
+                           md="4"
+                           sm="12">
                         <v-select
                                 :items="payment_list"
                                 filled
@@ -247,11 +284,13 @@
                 payment: "",
                 phone:'',
                 email:'',
+                coverage: '',
                 description:'',
                 postalcode:'',
                 agreement: false,
                 birthdate:'',
                 gender:'',
+                timelapse:'',
                 weight:'',
                 height:'',
                 paymentcapacity:''
@@ -265,6 +304,7 @@
                     brand: [val => (val || '').length > 0 || 'Ingresa la Marca del Autóvil'],
                     agreement: v => !!v || 'Esto es requerido',
                     payment: v => !!v || 'Selecciona una forma de pago',
+                    coverage: v => !!v || 'Selecciona un filtro',
                     phone: [v => (v || '').length == 10 || 'Por favor, ingresa un teléfono válido'],
                     email: [v => (v || '').length > 0 ||(v || '').match(/@/) || 'Por favor, ingresa un correo electrónico válido'],
                     birthdate: v => !!v || 'Ingresa tu fecha de nacimiento d/mes/año',
@@ -272,7 +312,7 @@
                     weight: v => !!v || 'Esto es requerido',
                     height: v => !!v || 'Esto es requerido',
                     paymentcapacity: v => !!v || 'Esto es requerido',
-
+                    timelapse: v => !!v || 'Ingresa un tiempo de duración aproximado',
                 },
                 defaultForm: Object.freeze({
                     firstname: '',
@@ -280,20 +320,24 @@
                     phone:'',
                     email:'',
                     birthdate:'',
+                    coverage: "",
                     payment: "",
                     brand: '',
                     postalcode:'',
                     agreement: false,
                     description: '',
                     gender:'',
+                    timelapse: '',
                     weight:'',
                     height:'',
                     paymentcapacity:''
 
                 }),
                 checkbox: false,
+                coverage_list:["Seguro de Ahorro e Inversión","Seguro para la Educación Profesional de los Hijos","Seguro de Socios y Hombre Clave"],
                 payment_list: ["Anual", "Semestral", "Trimestral", "Mensual"],
                 gender_list: ["Mujer", "Hombre", "Otro"],
+                timelapse_list: ["10 Años", "20 Años", "Vitalicio"],
 
             }
         },
@@ -307,8 +351,10 @@
                     this.form.birthdate &&
                     this.form.gender &&
                     this.form.weight &&
+                    this.form.timelapse &&
                     this.form.height &&
                     this.form.payment &&
+                    this.form.coverage &&
                     this.form.agreement &&
                     this.form.paymentcapacity
                 )
@@ -325,13 +371,14 @@
                         { "birthdate": this.form.birthdate},
                         { "seguro_info":{
                                 "type": dataf.seguros.vida,
+                                "coverage":  this.form.coverage,
+                                "timelapse": this.form.timelapse,
                                 "payment": this.form.payment,
                                 "paymentcapacity": this.form.paymentcapacity,
                                 "gender": this.form.gender,
                                 "weight": this.form.weight,
                                 "height": this.form.height,
-                                "description": this.form.description,
-
+                                "description": this.form.description
                             }
                         },
                     ]
@@ -370,6 +417,8 @@
                     "&description="+this.form.description +
                     "&gender="+this.form.gender +
                     "&weight="+this.form.weight +
+                    "&timelapse="+this.form.timelapse +
+                    "&coverage="+this.form.coverage +
                     "&height="+this.form.height +
                     "&paymentcapacity="+this.form.paymentcapacity +
                     "&formType=" + dataf.seguros.vida

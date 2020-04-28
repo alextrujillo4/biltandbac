@@ -165,6 +165,7 @@
                 pisos:"",
                 suma:"",
                 modelyear:"",
+                timelapse:"",
                 description:""
             }
         },
@@ -175,7 +176,7 @@
             this.phone = this.$route.query.phone
             this.birthdate = this.$route.query.birthdate
             this.formType = this.$route.query.formType
-            this.cobertura = this.$route.query.cobertura
+            this.cobertura = this.$route.query.coverage
             this.payment = this.$route.query.payment
             this.brand = this.$route.query.brand
             this.modelyear = this.$route.query.modelyear
@@ -190,6 +191,7 @@
             this.pisos = this.$route.query.pisos
             this.suma = this.$route.query.suma
             this.postalcode = this.$route.query.postalcode
+            this.timelapse = this.$route.query.timelapse
             this.variable = "Cotizador"
             this.user= [
                 {variable: "Cotizador"},
@@ -200,6 +202,7 @@
                 {seguro_info: {
                         type: this.formType,
                         coverage: this.cobertura,
+                        timelapse: this.timelapse,
                         payment:this.payment,
                         paymentcapacity: this.paymentcapacity,
                         gender: this.gender,

@@ -11,11 +11,11 @@
                 <v-card class="mb-6" color="accent" dark>
                     <v-card-title>
                         <h1 class="title mt-2 hidden-sm-and-down">
-                            {{data.product.product}}
+                            {{data.product.product}} <br>  <div class="subtitle-1 white--text">{{data.product.coverage}}</div>
                         </h1>
                         <!--mobile-->
                         <h1 class="subtitle-1 white--text mt-2 hidden-md-and-up ">
-                            {{data.product.product}}
+                            {{data.product.product}}  <br>  <div class="subtitle-1 white--text">{{data.product.coverage}}</div>
                         </h1>
                     </v-card-title>
                     <v-card-text class="headline ">"{{data.product.description_short}}"</v-card-text>

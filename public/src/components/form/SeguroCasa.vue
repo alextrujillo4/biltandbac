@@ -350,7 +350,7 @@
                         { "phone": this.form.phone},
                         { "birthdate": this.form.birthdate},
                         { "seguro_info":{
-                                "type": dataf.seguros.autos,
+                                "type": dataf.seguros.danios,
                                 "coverage": this.form.cobertura,
                                 "muro": this.form.muro,
                                 "techo": this.form.techo,
