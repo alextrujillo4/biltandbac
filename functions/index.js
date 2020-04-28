@@ -13,8 +13,6 @@ app.get('/hello', (req, res) => {
 
 app.post('/hello', (req, res) => {
     const data = req.body.name;
-    console.log(data)
-
     //<<< Personal Info
     const variable = data[0].variable;
     const name = data[1].name;
@@ -36,6 +34,7 @@ app.post('/hello', (req, res) => {
             pass: '80408975Jl.'
         }
     });
+    //plara@bnbseguros.com
     var mailOptions = null;
     if (variable === "Home") {
         var mailbody = seguro_info.body
@@ -50,27 +49,9 @@ app.post('/hello', (req, res) => {
         }
 
     }else if (variable === "Automatic"){
-         mailOptions = {
-            from: "Bilt&Bac | Mensaje Automático <info@bnbseguros.com>",
-            to: "plara@bnbseguros.com",
-            subject: "Alguien podría estar interesado en una cotización",
-            text: `Nombre: ${name} | Correo Electrónico: ${email} | Teléfono: ${phone} | Fecha de nacimiento: ${birthdate} | Tipo de Seguro Interesado: ${type} | Tipo de Covertura: ${coverage}` ,
-            html: `<p style="font-size:large">Nombre: ${name}<br><br>Correo Electrónico: ${email}<br>Teléfono: ${phone}<br>Fecha de nacimiento: ${birthdate}<br>Tipo de Seguro Interesado: ${type}<br>Tipo de Covertura: ${coverage}</p>`
-        }
-
+         mailOptions = getAutomaticData(variable, name, email, phone,birthdate, seguro_info);
     }else if (variable === "Cotizador"){
-        mailOptions = {
-            from: "Bilt&Bac | Mensaje Automático <info@bnbseguros.com>",
-            to: "plara@bnbseguros.com",
-            subject: "Solicitud de cotización",
-            text: `Nombre: ${name} | Correo Electrónico: ${email} | Teléfono: ${phone} | Fecha de nacimiento: ${birthdate} | Tipo de Seguro Interesado: ${type} | Tipo de Covertura: ${coverage}` ,
-            html: `<p style="font-size:large">Nombre: ${name}<br><br>
-                    Correo Electrónico: ${email}<br>
-                    Teléfono: ${phone}<br>
-                    Fecha de nacimiento: ${birthdate}<br>
-                    Tipo de Seguro Interesado: ${type}<br>
-                    Tipo de Covertura: ${coverage}</p>`
-        }
+        mailOptions = getCotizadorData(variable, name, email, phone,birthdate, seguro_info);
         var userOptions = {
             from: "Bilt&Bac | Mensaje Automático <info@bnbseguros.com>",
             to: email,
@@ -491,15 +472,219 @@ app.post('/hello', (req, res) => {
 
     transporter.sendMail(mailOptions, function (err, info) {
         if(err){
-            console.log(err)
             res.status(200).send("Mesage NOT Sent");
         } else {
-            console.log(info);
             res.status(200).send("Mesage Sent");
         }
     });
 
 });
+
+var seguros = {
+    autos: "Seguro de Autos",
+    autosflotilla: "Seguro de Autos Flotilla",
+    vida: 'Seguro de Vida',
+    danios: 'Seguro Contra Daños',
+    medicosmayores: 'Seguro de Gastos Médicos Mayores',
+}
+
+function getAutomaticData(variable, name, email, phone,birthdate, seguro_info){
+    if (seguro_info.type === seguros.autos){
+       return {
+           from: "Bilt&Bac | Mensaje Automático <info@bnbseguros.com>",
+           to: "plara@bnbseguros.com",
+           subject: "Alguien podría estar interesado en una cotización",
+           text: `Nombre: ${name} | Correo Electrónico: ${email} | Teléfono: ${phone} | Fecha de nacimiento: ${birthdate} | Tipo de Seguro Interesado: ${seguro_info.type} | Tipo de Covertura: ${seguro_info.coverage}`,
+           html: `<p style="font-size:large">
+                Nombre: ${name}<br>
+                Correo Electrónico: ${email}<br>
+                Teléfono: ${phone}<br>
+                Fecha de nacimiento: ${birthdate}<br><br>
+                Seguro Interesado: ${seguro_info.type}<br>
+                Covertura: ${seguro_info.coverage}<br>
+                Código Postal del Vehículo: ${seguro_info.postalcode}<br>
+                Marca del Vehículo: ${seguro_info.brand}<br>
+                Año del Vehículo: ${seguro_info.modelyear}<br>
+                Forma de Pago: ${seguro_info.payment}<br>
+                Descripción: ${seguro_info.description}<br>
+                </p>`
+       }
+    }else if (seguro_info.type === seguros.autosflotilla){
+        return {
+            from: "Bilt&Bac | Mensaje Automático <info@bnbseguros.com>",
+            to: "plara@bnbseguros.com",
+            subject: "Alguien podría estar interesado en una cotización",
+            text: `Nombre: ${name} | Correo Electrónico: ${email} | Teléfono: ${phone} | Fecha de nacimiento: ${birthdate} | Tipo de Seguro Interesado: ${seguro_info.type} | Tipo de Covertura: ${seguro_info.coverage}`,
+            html: `<p style="font-size:large">
+                Nombre: ${name}<br>
+                Correo Electrónico: ${email}<br>
+                Teléfono: ${phone}<br>
+                Fecha de nacimiento: ${birthdate}<br><br>
+                Seguro Interesado: ${seguro_info.type}<br>
+                Descripción: ${seguro_info.description}<br>
+                </p>`
+        }
+    } else if (seguro_info.type === seguros.danios){
+        return {
+            from: "Bilt&Bac | Mensaje Automático <info@bnbseguros.com>",
+            to: "plara@bnbseguros.com",
+            subject: "Alguien podría estar interesado en una cotización",
+            text: `Nombre: ${name} | Correo Electrónico: ${email} | Teléfono: ${phone} | Fecha de nacimiento: ${birthdate} | Tipo de Seguro Interesado: ${seguro_info.type} | Tipo de Covertura: ${seguro_info.coverage}`,
+            html: `<p style="font-size:large">
+                Nombre: ${name}<br>
+                Correo Electrónico: ${email}<br>
+                Teléfono: ${phone}<br>
+                Fecha de nacimiento: ${birthdate}<br><br>
+                Seguro Interesado: ${seguro_info.type}<br>
+                Covertura: ${seguro_info.coverage}<br>
+                Tipo de Muro: ${seguro_info.muro}<br>
+                Tipo de Techo: ${seguro_info.techo}<br>
+                # de Pisos: ${seguro_info.pisos}<br>
+                Suma asegurasa: ${seguro_info.suma}<br>
+                Forma de Pago: ${seguro_info.payment}<br>
+                </p>`
+        }
+    } else if (seguro_info.type === seguros.medicosmayores){
+        return {
+            from: "Bilt&Bac | Mensaje Automático <info@bnbseguros.com>",
+            to: "plara@bnbseguros.com",
+            subject: "Alguien podría estar interesado en una cotización",
+            text: `Nombre: ${name} | Correo Electrónico: ${email} | Teléfono: ${phone} | Fecha de nacimiento: ${birthdate} | Tipo de Seguro Interesado: ${seguro_info.type} | Tipo de Covertura: ${seguro_info.coverage}`,
+            html: `<p style="font-size:large">
+                Nombre: ${name}<br>
+                Correo Electrónico: ${email}<br>
+                Teléfono: ${phone}<br>
+                Fecha de nacimiento: ${birthdate}<br><br>
+                Seguro Interesado: ${seguro_info.type}<br>
+                Covertura: ${seguro_info.coverage}<br>
+                Código postal: ${seguro_info.postalcode}<br>
+                Género: ${seguro_info.gender}<br>
+                Estatura: ${seguro_info.height}<br>
+                Peso: ${seguro_info.weight}<br>
+                Forma de Pago: ${seguro_info.payment}<br>
+                </p>`
+        }
+    } else if (seguro_info.type === seguros.vida){
+        return {
+        from: "Bilt&Bac | Mensaje Automático <info@bnbseguros.com>",
+        to: "plara@bnbseguros.com",
+        subject: "Alguien podría estar interesado en una cotización",
+        text: `Nombre: ${name} | Correo Electrónico: ${email} | Teléfono: ${phone} | Fecha de nacimiento: ${birthdate} | Tipo de Seguro Interesado: ${seguro_info.type} | Tipo de Covertura: ${seguro_info.coverage}`,
+        html: `<p style="font-size:large">
+                Nombre: ${name}<br>
+                Correo Electrónico: ${email}<br>
+                Teléfono: ${phone}<br>
+                Fecha de nacimiento: ${birthdate}<br><br>
+                Seguro Interesado: ${seguro_info.type}<br>
+                Covertura: ${seguro_info.coverage}<br>
+                Forma de Pago: ${seguro_info.paymentcapacity}<br>
+                Género: ${seguro_info.gender}<br>
+                Estatura: ${seguro_info.height}<br>
+                Peso: ${seguro_info.weight}<br>
+                Descripción: ${seguro_info.description}<br>
+                </p>`
+        }
+    }
+}
+//            subject: "Solicitud de cotización",getAutomaticData
+function getCotizadorData(variable, name, email, phone,birthdate, seguro_info){
+    if (seguro_info.type === seguros.autos){
+        return {
+            from: "Bilt&Bac | Mensaje Automático <info@bnbseguros.com>",
+            to: "plara@bnbseguros.com",
+            subject: "Solicitud de cotización",
+            text: `Nombre: ${name} | Correo Electrónico: ${email} | Teléfono: ${phone} | Fecha de nacimiento: ${birthdate} | Tipo de Seguro Interesado: ${seguro_info.type} | Tipo de Covertura: ${seguro_info.coverage}`,
+            html: `<p style="font-size:large">
+                Nombre: ${name}<br>
+                Correo Electrónico: ${email}<br>
+                Teléfono: ${phone}<br>
+                Fecha de nacimiento: ${birthdate}<br><br>
+                Seguro Interesado: ${seguro_info.type}<br>
+                Covertura: ${seguro_info.coverage}<br>
+                Código Postal del Vehículo: ${seguro_info.postalcode}<br>
+                Marca del Vehículo: ${seguro_info.brand}<br>
+                Año del Vehículo: ${seguro_info.modelyear}<br>
+                Forma de Pago: ${seguro_info.payment}<br>
+                Descripción: ${seguro_info.description}<br>
+                </p>`
+        }
+    }else if (seguro_info.type === seguros.autosflotilla){
+        return {
+            from: "Bilt&Bac | Mensaje Automático <info@bnbseguros.com>",
+            to: "plara@bnbseguros.com",
+            subject: "Solicitud de cotización",
+            text: `Nombre: ${name} | Correo Electrónico: ${email} | Teléfono: ${phone} | Fecha de nacimiento: ${birthdate} | Tipo de Seguro Interesado: ${seguro_info.type} | Tipo de Covertura: ${seguro_info.coverage}`,
+            html: `<p style="font-size:large">
+                Nombre: ${name}<br>
+                Correo Electrónico: ${email}<br>
+                Teléfono: ${phone}<br>
+                Fecha de nacimiento: ${birthdate}<br><br>
+                Seguro Interesado: ${seguro_info.type}<br>
+                Descripción: ${seguro_info.description}<br>
+                </p>`
+        }
+    } else if (seguro_info.type === seguros.danios){
+        return {
+            from: "Bilt&Bac | Mensaje Automático <info@bnbseguros.com>",
+            to: "plara@bnbseguros.com",
+            subject: "Solicitud de cotización",
+            text: `Nombre: ${name} | Correo Electrónico: ${email} | Teléfono: ${phone} | Fecha de nacimiento: ${birthdate} | Tipo de Seguro Interesado: ${seguro_info.type} | Tipo de Covertura: ${seguro_info.coverage}`,
+            html: `<p style="font-size:large">
+                Nombre: ${name}<br>
+                Correo Electrónico: ${email}<br>
+                Teléfono: ${phone}<br>
+                Fecha de nacimiento: ${birthdate}<br><br>
+                Seguro Interesado: ${seguro_info.type}<br>
+                Covertura: ${seguro_info.coverage}<br>
+                Tipo de Muro: ${seguro_info.muro}<br>
+                Tipo de Techo: ${seguro_info.techo}<br>
+                # de Pisos: ${seguro_info.pisos}<br>
+                Suma asegurasa: ${seguro_info.suma}<br>
+                Forma de Pago: ${seguro_info.payment}<br>
+                </p>`
+        }
+    } else if (seguro_info.type === seguros.medicosmayores){
+        return {
+            from: "Bilt&Bac | Mensaje Automático <info@bnbseguros.com>",
+            to: "plara@bnbseguros.com",
+            subject: "Solicitud de cotización",
+            text: `Nombre: ${name} | Correo Electrónico: ${email} | Teléfono: ${phone} | Fecha de nacimiento: ${birthdate} | Tipo de Seguro Interesado: ${seguro_info.type} | Tipo de Covertura: ${seguro_info.coverage}`,
+            html: `<p style="font-size:large">
+                Nombre: ${name}<br>
+                Correo Electrónico: ${email}<br>
+                Teléfono: ${phone}<br>
+                Fecha de nacimiento: ${birthdate}<br><br>
+                Seguro Interesado: ${seguro_info.type}<br>
+                Covertura: ${seguro_info.coverage}<br>
+                Código postal: ${seguro_info.postalcode}<br>
+                Género: ${seguro_info.gender}<br>
+                Estatura: ${seguro_info.height}<br>
+                Peso: ${seguro_info.weight}<br>
+                Forma de Pago: ${seguro_info.payment}<br>
+                </p>`
+        }
+    } else if (seguro_info.type === seguros.vida){
+        return {
+            from: "Bilt&Bac | Mensaje Automático <info@bnbseguros.com>",
+            to: "plara@bnbseguros.com",
+            subject: "Solicitud de cotización",
+            text: `Nombre: ${name} | Correo Electrónico: ${email} | Teléfono: ${phone} | Fecha de nacimiento: ${birthdate} | Tipo de Seguro Interesado: ${seguro_info.type} | Tipo de Covertura: ${seguro_info.coverage}`,
+            html: `<p style="font-size:large">
+                Nombre: ${name}<br>
+                Correo Electrónico: ${email}<br>
+                Teléfono: ${phone}<br>
+                Fecha de nacimiento: ${birthdate}<br><br>
+                Seguro Interesado: ${seguro_info.type}<br>
+                Forma de Pago: ${seguro_info.payment}<br>
+                Capacidad de pago: ${seguro_info.paymentcapacity}<br>
+                Género: ${seguro_info.gender}<br>
+                Estatura: ${seguro_info.height}<br>
+                Peso: ${seguro_info.weight}<br>
+                Descripción: ${seguro_info.description}<br>
+                </p>`
+        }
+    }
+}
 
 // Expose Express API as a single Cloud Function:
 exports.emailMessage = functions.https.onRequest(app);
