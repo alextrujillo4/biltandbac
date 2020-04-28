@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="161d7063-4807-4502-bcca-c7a9d5ae132e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/components/form/SeguroVida.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/form/SeguroVida.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +102,10 @@
       <workItem from="1587316513598" duration="199000" />
       <workItem from="1587316717008" duration="9733000" />
       <workItem from="1587672185969" duration="9317000" />
-      <workItem from="1587696132882" duration="5451000" />
+      <workItem from="1587696132882" duration="12515000" />
+      <workItem from="1587759599246" duration="1246000" />
+      <workItem from="1587839997196" duration="228000" />
+      <workItem from="1588092191346" duration="799000" />
     </task>
     <servers />
   </component>
@@ -147,21 +150,21 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="297" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1585020677898" />
-    <state x="295" y="164" width="689" height="472" key="find.popup" timestamp="1587705156220">
+    <state x="295" y="164" width="689" height="472" key="find.popup" timestamp="1588092923240">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="295" y="164" width="689" height="472" key="find.popup/0.0.1280.800/-1366.-255.1366.768@0.0.1280.800" timestamp="1585780184904" />
     <state x="295" y="164" width="689" height="472" key="find.popup/0.0.1280.800/1280.-476.1366.768@0.0.1280.800" timestamp="1587705156220" />
-    <state x="295" y="164" width="689" height="472" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1587680492864" />
+    <state x="295" y="164" width="689" height="472" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1588092923240" />
     <state x="305" y="185" key="run.anything.popup" timestamp="1584380018539">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="305" y="185" key="run.anything.popup/0.23.1280.709@0.23.1280.709" timestamp="1584380018539" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1587704778657">
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1587760088493">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800/1280.-476.1366.768@0.0.1280.800" timestamp="1587704778657" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1587226821899" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1587760088493" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
