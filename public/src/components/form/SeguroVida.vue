@@ -157,7 +157,7 @@
                                 v-model="form.height"></v-text-field>
                     </v-col>
 
-                    <!--Genero-->
+                    <!--Género-->
                     <v-col class="d-flex"
                            cols="12"
                            xl="4"
@@ -169,7 +169,7 @@
                                 filled
                                 :rules="rules.gender"
                                 required
-                                label="Genero"
+                                label="Género"
                                 single-line
                                 v-model="form.gender"></v-select>
                     </v-col>
@@ -222,7 +222,7 @@
                                 v-model="form.description"></v-textarea>
 
                     </v-col>
-                    <!--Terminos y condiciones-->
+                    <!--Términos y condiciones-->
                     <v-col class="d-flex"
                            cols="12"
                            lg="12"
@@ -237,7 +237,7 @@
                         >
                             <template v-slot:label>
                                 <p> Al seleccionar esta opción, estoy aceptando los &nbsp;
-                                <a href="#" @click.stop.prevent="dialog = true">Terminos y condiciones</a>
+                                <a href="#" @click.stop.prevent="dialog = true">Términos y condiciones</a>
                                 &nbsp; además &nbsp;
                                 <a href="#" @click.stop.prevent="dialog = true">la política de privacidad de la empresa.</a>*
                                 </p>

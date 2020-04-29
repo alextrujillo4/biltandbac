@@ -59,7 +59,7 @@
 <script>
     import SeguroAutos from '../form/SeguroAutos';
     import SeguroAutosFlotilla from '../form/SeguroAutosFlotilla';
-    import SeguroCasa from '../form/SeguroCasa';
+    import SeguroCasa from '../form/SeguroDanios';
     import SeguroMedico from '../form/SeguroMedico';
     import SeguroVida from '../form/SeguroVida';
     import data from "../../credentials/constants.js"

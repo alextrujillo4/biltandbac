@@ -50,9 +50,9 @@
                             <v-icon left>mdi-tag</v-icon>
                             {{formType}}
                           </v-chip>
-                          <v-chip class="mr-2 mt-2" v-if="cobertura">
+                          <v-chip class="mr-2 mt-2" v-if="coverage">
                             <v-icon left>mdi-shield-account</v-icon>
-                            {{cobertura}}
+                            {{coverage}}
                           </v-chip>
                           <v-chip class="mr-2 mt-2" v-if="payment">
                             <v-icon left>mdi-currency-usd</v-icon>
@@ -146,7 +146,7 @@
                 drawer: true,
                 name: "",
                 formType: "",
-                cobertura: "",
+                coverage: "",
                 payment: "",
                 paymentcapacity: "",
                 brand: "",
@@ -154,12 +154,14 @@
                 seguro: "",
                 user: [],
                 phone: "",
+                location:"",
                 birthdate: "",
                 variable:"",
                 gender:"",
                 height:"",
                 weight:"",
                 postalcode:"",
+                giro:"",
                 muro:"",
                 techo:"",
                 pisos:"",
@@ -174,9 +176,10 @@
             this.name = this.$route.query.firstname + " " + this.$route.query.lastname
             this.email = this.$route.query.email
             this.phone = this.$route.query.phone
+            this.location = this.$route.query.location
             this.birthdate = this.$route.query.birthdate
             this.formType = this.$route.query.formType
-            this.cobertura = this.$route.query.coverage
+            this.coverage = this.$route.query.coverage
             this.payment = this.$route.query.payment
             this.brand = this.$route.query.brand
             this.modelyear = this.$route.query.modelyear
@@ -191,6 +194,7 @@
             this.pisos = this.$route.query.pisos
             this.suma = this.$route.query.suma
             this.postalcode = this.$route.query.postalcode
+            this.giro  = this.$route.query.giro,
             this.timelapse = this.$route.query.timelapse
             this.variable = "Cotizador"
             this.user= [
@@ -201,7 +205,7 @@
                 {birthdate: this.birthdate},
                 {seguro_info: {
                         type: this.formType,
-                        coverage: this.cobertura,
+                        coverage: this.coverage,
                         timelapse: this.timelapse,
                         payment:this.payment,
                         paymentcapacity: this.paymentcapacity,
@@ -209,11 +213,13 @@
                         height: this.height,
                         weight: this.weight,
                         postalcode: this.postalcode,
+                        giro : this.giro,
                         muro: this.muro,
                         techo: this.techo,
                         pisos: this.pisos,
                         suma: this.suma,
                         brand: this.brand,
+                        location: this.location,
                         modelyear: this.modelyear,
                         description: this.description
                     }

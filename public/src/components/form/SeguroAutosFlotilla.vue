@@ -106,7 +106,7 @@
                                 v-model="form.description"></v-textarea>
 
                     </v-col>
-                    <!--Terminos y condiciones-->
+                    <!--Términos y condiciones-->
                     <v-col class="d-flex"
                            cols="12"
                            lg="12"
@@ -121,7 +121,7 @@
                         >
                             <template v-slot:label >
                                 <p > Al seleccionar esta opción, estoy aceptando los &nbsp;
-                                    <a href="#" @click.stop.prevent="dialog = true">Terminos y condiciones</a>
+                                    <a href="#" @click.stop.prevent="dialog = true">Términos y condiciones</a>
                                     &nbsp; además &nbsp;
                                     <a href="#" @click.stop.prevent="dialog = true">la política de privacidad de la empresa.</a>*
                                 </p>
@@ -169,7 +169,7 @@
                 email:'',
                 description:'',
                 postalcode:'',
-                cobertura: '',
+                coverage: '',
                 birthdate:'',
                 agreement: false,
             })
@@ -183,7 +183,7 @@
                     agreement: v => !!v || 'Esto es requerido',
                     payment: v => !!v || 'Selecciona una forma de pago',
                     phone: [v => (v || '').length == 10 || 'Por favor, ingresa un teléfono válido'],
-                    cobertura: v => !!v || 'Selecciona un Tipo de Cobertura',
+                    coverage: v => !!v || 'Selecciona un Tipo de cobertura',
                     birthdate: v => !!v || 'Ingresa tu fecha de nacimiento d/mes/año',
                     email: [v => (v || '').length > 0 ||(v || '').match(/@/) || 'Por favor, ingresa un correo electrónico válido'],
                 },
@@ -196,14 +196,14 @@
                     email:'',
                     postalcode:'',
                     agreement: false,
-                    cobertura: '',
+                    coverage: '',
                     birthdate:'',
                     description: ''
 
                 }),
                 checkbox: false,
                 payment_list: ["Anual", "Semestral", "Trimestral", "Mensual"],
-                cobertura_list: ["Cobertura Amplia", "Cobertura Limitada", "Cobertura Responsabilidad Civil"],
+                coverage_list: ["Cobertura Amplia", "Cobertura Limitada", "Cobertura Responsabilidad Civil"],
 
             }
         },
@@ -267,7 +267,7 @@
                     "&postalcode="+this.form.postalcode +
                     "&brand="+this.form.brand +
                     "&payment="+this.form.payment +
-                    "&cobertura="+this.form.cobertura +
+                    "&coverage="+this.form.coverage +
                     "&agreement="+this.form.agreement +
                     "&description="+this.form.description +
                     "&formType=" + dataf.seguros.autosflotilla

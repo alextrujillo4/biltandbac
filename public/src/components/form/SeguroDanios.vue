@@ -91,7 +91,7 @@
                     <v-col class="d-flex" cols="12">
                         <p>Datos del Bien a Cotizar</p>
                     </v-col>
-                    <!--Tipo de Covertura-->
+                    <!--Tipo de Cobertura-->
                         <v-col class="d-flex"
                                cols="12"
                                xl="4"
@@ -99,14 +99,14 @@
                                md="4"
                                sm="12">
                             <v-radio-group
-                                    :rules="rules.cobertura"
+                                    :rules="rules.coverage"
                                     filled
                                     required
-                                    v-model="form.cobertura">
+                                    v-model="form.coverage">
                                 <template v-slot:label >
-                                    <div>Selecciona el tipo de <strong>Cobertura</strong> que buscas.</div>
+                                    <div>Selecciona el tipo de <strong>cobertura</strong> que buscas.</div>
                                 </template>
-                                <template v-for="item in cobertura_list" >
+                                <template v-for="item in coverage_list" >
                                     <v-radio :value="item" :key="item">
                                         <template v-slot:label>
                                             <div>{{item}}</div>
@@ -115,6 +115,23 @@
                                 </template>
                             </v-radio-group>
                         </v-col>
+
+                    <!--Giro de empresa-->
+                    <v-col v-if="form.coverage === 'Seguro PYME'"
+                            class="d-flex"
+                           cols="12"
+                           xl="2"
+                           lg="2"
+                           md="2"
+                           sm="12">
+                        <v-text-field
+                                :rules="rules.giro"
+                                filled
+                                label="Giro de la empresa"
+                                required
+                                v-model="form.giro"></v-text-field>
+                    </v-col>
+
                     <!--Dirección-->
                     <v-col class="d-flex"
                            cols="12"
@@ -130,12 +147,28 @@
                                 required
                                 v-model="form.location"></v-text-field>
                     </v-col>
+
+                    <!--Código postal CP-->
+                    <v-col class="d-flex"
+                           cols="12"
+                           xl="2"
+                           lg="2"
+                           md="2"
+                           sm="12">
+                        <v-text-field
+                                :counter="5"
+                                :rules="rules.postalcode"
+                                filled
+                                label="Código postal donde circula el bien"
+                                required
+                                v-model="form.postalcode"></v-text-field>
+                    </v-col>
                     <!--Tipo Muro-->
                     <v-col class="d-flex"
                            cols="12"
-                           xl="4"
-                           lg="4"
-                           md="4"
+                           xl="3"
+                           lg="3"
+                           md="3"
                            sm="12">
                         <v-text-field
                                 :rules="rules.muro"
@@ -147,9 +180,9 @@
                     <!--Tipo Techo-->
                     <v-col class="d-flex"
                            cols="12"
-                           xl="4"
-                           lg="4"
-                           md="4"
+                           xl="3"
+                           lg="3"
+                           md="3"
                            sm="12">
                         <v-text-field
                                 :rules="rules.techo"
@@ -161,9 +194,9 @@
                     <!--Numero de pisos-->
                     <v-col class="d-flex"
                            cols="12"
-                           xl="4"
-                           lg="4"
-                           md="4"
+                           xl="3"
+                           lg="3"
+                           md="3"
                            sm="12">
                         <v-text-field
                                 :rules="rules.pisos"
@@ -175,9 +208,9 @@
                     <!--Suma a a segurar-->
                     <v-col class="d-flex"
                            cols="12"
-                           xl="4"
-                           lg="4"
-                           md="4"
+                           xl="3"
+                           lg="3"
+                           md="3"
                            sm="12">
                         <v-text-field
                                 :rules="rules.suma"
@@ -203,7 +236,7 @@
                                 single-line
                                 v-model="form.payment"></v-select>
                     </v-col>
-                    <!--Terminos y condiciones-->
+                    <!--Términos y condiciones-->
                     <v-col class="d-flex"
                            cols="12"
                            lg="12"
@@ -218,7 +251,7 @@
                         >
                             <template v-slot:label>
                                 <p> Al seleccionar esta opción, estoy aceptando los &nbsp;
-                                <a href="#" @click.stop.prevent="dialog = true">Terminos y condiciones</a>
+                                <a href="#" @click.stop.prevent="dialog = true">Términos y condiciones</a>
                                 &nbsp; además &nbsp;
                                 <a href="#" @click.stop.prevent="dialog = true">la política de privacidad de la empresa.</a>*
                                 </p>
@@ -267,7 +300,8 @@
                 email:'',
                 description:'',
                 postalcode:'',
-                cobertura: '',
+                coverage: '',
+                giro: '',
                 agreement: false,
                 birthdate:'',
                 location:'',
@@ -286,7 +320,8 @@
                     agreement: v => !!v || 'Esto es requerido',
                     payment: v => !!v || 'Selecciona una forma de pago',
                     phone: [v => (v || '').length == 10 || 'Por favor, ingresa un teléfono válido'],
-                    cobertura: v => !!v || 'Selecciona un Tipo de Cobertura',
+                    coverage: v => !!v || 'Selecciona un Tipo de coverage',
+                    giro: v => !!v || 'Ingresa el giro de tu empresa',
                     email: [v => (v || '').length > 0 ||(v || '').match(/@/) || 'Por favor, ingresa un correo electrónico válido'],
                     birthdate: v => !!v || 'Ingresa tu fecha de nacimiento d/mes/año',
                     location: v => !!v || 'Este campo es requerido',
@@ -306,7 +341,7 @@
                     birthdate:'',
                     description:'',
                     postalcode:'',
-                    cobertura: '',
+                    coverage: '',
                     agreement: false,
                     location:'',
                     muro: '',
@@ -317,7 +352,7 @@
                 }),
                 checkbox: false,
                 payment_list: ["Anual", "Semestral", "Trimestral", "Mensual"],
-                cobertura_list: ["Seguro Casa + Plus", "Seguro PYME"],
+                coverage_list: ["Seguro Casa + Plus", "Seguro PYME"],
 
             }
         },
@@ -329,8 +364,9 @@
                     this.form.email &&
                     this.form.phone &&
                     this.form.payment &&
-                    this.form.cobertura&&
+                    this.form.coverage&&
                     this.form.birthdate &&
+                    this.form.postalcode &&
                     this.form.location&&
                     this.form.muro&&
                     this.form.techo&&
@@ -351,10 +387,13 @@
                         { "birthdate": this.form.birthdate},
                         { "seguro_info":{
                                 "type": dataf.seguros.danios,
-                                "coverage": this.form.cobertura,
+                                "coverage": this.form.coverage,
+                                "postalcode": this.form.postalcode,
+                                "location": this.form.location,
                                 "muro": this.form.muro,
                                 "techo": this.form.techo,
                                 "pisos": this.form.pisos,
+                                "giro": this.form.giro || "No Aplica",
                                 "suma": this.form.suma,
                                 "payment": this.form.payment
                             }
@@ -393,7 +432,8 @@
                     "&postalcode="+this.form.postalcode +
                     "&brand="+this.form.brand +
                     "&payment="+this.form.payment +
-                    "&cobertura="+this.form.cobertura +
+                    "&coverage="+this.form.coverage +
+                    "&giro="+this.form.giro +
                     "&agreement="+this.form.agreement +
                     "&description="+this.form.description +
                     "&location="+this.form.location +

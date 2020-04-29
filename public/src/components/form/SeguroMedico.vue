@@ -108,7 +108,7 @@
                                 v-model="form.postalcode"></v-text-field>
                     </v-col>
 
-                    <!--Genero-->
+                    <!--Género-->
                     <!--Forma de pago-->
                     <v-col class="d-flex"
                            cols="12"
@@ -121,7 +121,7 @@
                                 filled
                                 :rules="rules.gender"
                                 required
-                                label="Genero"
+                                label="Género"
                                 single-line
                                 v-model="form.gender"></v-select>
                     </v-col>
@@ -156,13 +156,48 @@
                                 v-model="form.height"></v-text-field>
                     </v-col>
 
+                    <!--Tipo de Cobertura-->
+                    <v-col class="d-flex"
+                           cols="12"
+                           xl="6"
+                           lg="6"
+                           md="6"
+                           sm="12">
+                        <v-radio-group
+                                :rules="rules.coverage"
+                                filled
+                                required
+                                v-model="form.coverage">
+                            <template v-slot:label >
+                                <div>Selecciona el tipo de <strong>cobertura</strong> que buscas.</div>
+                            </template>
+                            <p class="subtitle-2"  v-if="form.coverage === coverage_list[0]">
+                                Planes diseñados para adaptarse a tus necesidades y preferencias en materia de salud, con cobertura a nivel nacional.
+                            </p>
+                            <p class="subtitle-2"  v-if="form.coverage === coverage_list[1]">
+                                Atención médica con médicos reconocidos y en los mejores hospitales del país. Indemnización por Maternidad.
+                                Atención médica en el extranjero y más.
+                            </p>
+                            <p class="subtitle-2" v-if="form.coverage === coverage_list[2]">
+                                Cobertura a nivel nacional en reconocidos hospitales. Opción de elegir la Suma Asegurada que más se adapte a las necesidades de los clientes.
+                            </p>
+                            <template v-for="item in coverage_list" >
+                                <v-radio :value="item" :key="item">
+                                    <template v-slot:label>
+                                        <div>{{item}}</div>
+                                    </template>
+                                </v-radio>
+                            </template>
+                        </v-radio-group>
+                    </v-col>
+
                     <!--Forma de pago-->
                     <v-col class="d-flex"
                            cols="12"
-                           lg="12"
-                           md="12"
-                           sm="12"
-                           xl="12">
+                           xl="6"
+                           lg="6"
+                           md="6"
+                           sm="12">
                         <v-select
                                 :items="payment_list"
                                 filled
@@ -172,7 +207,7 @@
                                 single-line
                                 v-model="form.payment"></v-select>
                     </v-col>
-                    <!--Terminos y condiciones-->
+                    <!--Términos y condiciones-->
                     <v-col class="d-flex"
                            cols="12"
                            lg="12"
@@ -187,7 +222,7 @@
                         >
                             <template v-slot:label>
                                 <p> Al seleccionar esta opción, estoy aceptando los &nbsp;
-                                <a href="#" @click.stop.prevent="dialog = true">Terminos y condiciones</a>
+                                <a href="#" @click.stop.prevent="dialog = true">Términos y condiciones</a>
                                 &nbsp; además &nbsp;
                                 <a href="#" @click.stop.prevent="dialog = true">la política de privacidad de la empresa.</a>*
                                 </p>
@@ -240,7 +275,8 @@
                 birthdate:'',
                 gender:'',
                 weight:'',
-                height:''
+                height:'',
+                coverage: ''
             })
             return {
                 form: Object.assign({}, defaultForm),
@@ -257,6 +293,7 @@
                     gender: v => !!v || 'Esto es requerido',
                     weight: v => !!v || 'Esto es requerido',
                     height: v => !!v || 'Esto es requerido',
+                    coverage: v => !!v || 'Selecciona un Tipo de cobertura',
 
                 },
                 defaultForm: Object.freeze({
@@ -273,12 +310,15 @@
                     gender:'',
                     weight:'',
                     height:'',
+                    coverage: '',
 
                 }),
                 birthdate: new Date().toISOString().substr(0, 10),
                 checkbox: false,
                 payment_list: ["Anual", "Semestral", "Trimestral", "Mensual"],
                 gender_list: ["Mujer", "Hombre", "Otro"],
+                coverage_list: ["Línea Azul Premium", "Línea Azul Platino", "Línea Azul Flexible Índigo"],
+
 
             }
         },
@@ -290,6 +330,7 @@
                     this.form.email &&
                     this.form.phone &&
                     this.form.birthdate &&
+                    this.form.coverage &&
                     this.form.postalcode &&
                     this.form.gender &&
                     this.form.weight &&
@@ -310,7 +351,7 @@
                         { "birthdate": this.form.birthdate},
                         { "seguro_info":{
                                 "type": dataf.seguros.medicosmayores,
-                                "coverage": this.form.cobertura,
+                                "coverage": this.form.coverage,
                                 "postalcode": this.form.postalcode,
                                 "gender": this.form.gender,
                                 "weight": this.form.weight,
@@ -328,11 +369,9 @@
                         }})
                     .then(response => {
                         console.log("Message Sent.")
-                        console.log(response)
                     })
                     .catch( err => {
                         console.log("Ups.. Error D':")
-                        console.log(err)
                     })
 
             },
@@ -348,6 +387,7 @@
                     "&lastname="+this.form.lastname +
                     "&email="+this.form.email +
                     "&phone="+this.form.phone +
+                    "&coverage="+this.form.coverage +
                     "&birthdate="+this.form.birthdate +
                     "&postalcode="+this.form.postalcode +
                     "&brand="+this.form.brand +

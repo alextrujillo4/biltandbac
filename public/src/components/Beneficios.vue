@@ -74,7 +74,8 @@
                                 Tarifas Atractivas
                             </v-card-title>
                             <v-card-subtitle class="body-1 ma-2">
-                                Te ofrecemos las tarifas más atractivas y disponemos de descuentos adicionales en los Seguros de Automóviles.                            </v-card-subtitle>
+                                Te ofrecemos las tarifas más atractivas y disponemos de descuentos adicionales en los Seguros de Automóviles.
+                            </v-card-subtitle>
                         </div>
                     </v-layout>
                 </v-card>
@@ -103,10 +104,11 @@
                                 >
                                    mdi-home-heart
                                 </v-icon>
-                                Exito
+                                Éxito
                             </v-card-title>
                             <v-card-subtitle class="body-1 ma-2">
-                                Creemos que el éxito permanente se alcanza a través del trabajo en equipo, esfuerzo y realizando nuestras actividades diarias con entusiasmo y honestidad.                            </v-card-subtitle>
+                                Creemos que el éxito permanente se alcanza a través del trabajo en equipo, esfuerzo y realizando nuestras actividades diarias con entusiasmo y honestidad.
+                            </v-card-subtitle>
                         </div>
                     </v-layout>
                 </v-card>
