@@ -33,13 +33,13 @@ Hay dos formas de ejecutar el código.
 1. Despliegue local:
 Desde la terminal, situandose en la carpeta "public", escribir el siguiente comando:
 ```javascript
-yan serve
+yarn serve
 ```
 2. Despliegue en Producción:
 Desde la terminal, situandose en la carpeta "public", escribir los siguientes comandos:
 Para compilar el código de Vue.js (el código de Vue se encuentra en public/src)
 ```javascript
-yan build
+yarn build
 ```
 Una vez procesado está listo para subirlo a producción a firebase:
 (el código procesado de Vue se encuentra en public/dist)
