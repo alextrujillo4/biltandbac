@@ -3,20 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="161d7063-4807-4502-bcca-c7a9d5ae132e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/css/app.fb3d360d.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/app.07cde08c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/app.07cde08c.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/components/Beneficios.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/Beneficios.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/Footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/components/dialogs/DialogContent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/dialogs/DialogContent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/components/form/SeguroAutos.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/form/SeguroAutos.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/components/form/SeguroAutosFlotilla.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/form/SeguroAutosFlotilla.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/components/form/SeguroCasa.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/form/SeguroDanios.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/components/form/SeguroMedico.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/form/SeguroMedico.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/components/form/SeguroVida.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/components/form/SeguroVida.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/views/Cotizador.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/views/Cotizador.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +108,9 @@
       <workItem from="1588095884845" duration="250000" />
       <workItem from="1588102026900" duration="7380000" />
       <workItem from="1588117043431" duration="619000" />
-      <workItem from="1588175201539" duration="2751000" />
+      <workItem from="1588175201539" duration="2907000" />
+      <workItem from="1588264857871" duration="726000" />
+      <workItem from="1588549609227" duration="26000" />
     </task>
     <servers />
   </component>

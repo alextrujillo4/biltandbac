@@ -1,8 +1,9 @@
 module.exports = {
-  "transpileDependencies": [
-    "vuetify"
+  lintOnSave: false,
+  transpileDependencies: [
+    'vuetify',
   ],
   devServer: {
     proxy: 'https://backend.test/',
   }
-}
+};
