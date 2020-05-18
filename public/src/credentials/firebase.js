@@ -1,14 +1,14 @@
 import { initializeApp } from 'firebase';
 
 const app = initializeApp({
-  apiKey: "AIzaSyDknpHo4ahNzVlqb5GWOWFI7Xkr3GEVAXc",
-  authDomain: "biltandbac.firebaseapp.com",
-  databaseURL: "https://biltandbac.firebaseio.com",
-  projectId: "biltandbac",
-  storageBucket: "biltandbac.appspot.com",
-  messagingSenderId: "971941922255",
-  appId: "1:971941922255:web:fd2d884418da8da5e63eba",
-  measurementId: "G-ZD8DYTVMJS"
+  apiKey: "AIzaSyCp9yNlLtJVtI8DTQW86gLQa045poqSuJQ",
+  authDomain: "bnbseguro.firebaseapp.com",
+  databaseURL: "https://bnbseguro.firebaseio.com",
+  projectId: "bnbseguro",
+  storageBucket: "bnbseguro.appspot.com",
+  messagingSenderId: "671226044119",
+  appId: "1:671226044119:web:b592db1c2947b35ea65a92",
+  measurementId: "G-CD5SHM75Q8"
 });
 
 export const db = app.database();

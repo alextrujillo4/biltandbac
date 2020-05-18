@@ -100,7 +100,7 @@
                 let data = JSON.stringify({
                     "name": this.data.user
                 });
-                this.axios.post('https://us-central1-biltandbac.cloudfunctions.net/emailMessage/hello',
+                this.axios.post('https://us-central1-bnbseguro.cloudfunctions.net/emailMessage/hello',
                     data,{
                         headers: {
                             "Content-Type": "application/json",

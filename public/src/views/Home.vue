@@ -187,5 +187,9 @@
       dialog: false,
       querySeguro:"",
     }),
+    created() {
+      this.dialog = this.$route.query.dialog
+      //http://localhost:8080/?dialog=true To open
+    }
   };
 </script>

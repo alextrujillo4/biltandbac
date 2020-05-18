@@ -1,30 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="161d7063-4807-4502-bcca-c7a9d5ae132e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6ba1ac2a-c1d3-4dcf-88c5-173a9bfa5c93" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Sass File" />
-        <option value="SCSS File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectId" id="1Z2JuiFqbWUNOjd1MwVUtAXYsrV" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1bpLt2qeVC11FiGxUCahiv55G3z" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -32,85 +15,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/src/credentials" />
-    <property name="list.type.of.created.stylesheet" value="SCSS" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.standard" value="" />
-    <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/src/credentials" />
-      <recent name="$PROJECT_DIR$/public/src/components" />
-      <recent name="$PROJECT_DIR$/functions" />
-      <recent name="$PROJECT_DIR$/public/src/components/items" />
-      <recent name="$PROJECT_DIR$/public/src/components/dialogs" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/src/credentials" />
-      <recent name="$PROJECT_DIR$/public/src/components/dialogs" />
-      <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/credentials" />
-      <recent name="$PROJECT_DIR$/src/components/form" />
-    </key>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="161d7063-4807-4502-bcca-c7a9d5ae132e" name="Default Changelist" comment="" />
-      <created>1584031480593</created>
+      <changelist id="6ba1ac2a-c1d3-4dcf-88c5-173a9bfa5c93" name="Default Changelist" comment="" />
+      <created>1589324300894</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1584031480593</updated>
-      <workItem from="1584031487036" duration="270000" />
-      <workItem from="1584217355109" duration="10434000" />
-      <workItem from="1584299125616" duration="503000" />
-      <workItem from="1584324690105" duration="1255000" />
-      <workItem from="1584665236376" duration="8429000" />
-      <workItem from="1584996688870" duration="4000" />
-      <workItem from="1585018078259" duration="6794000" />
-      <workItem from="1585173799103" duration="164000" />
-      <workItem from="1585257234614" duration="2470000" />
-      <workItem from="1585272248248" duration="6677000" />
-      <workItem from="1585425043247" duration="6996000" />
-      <workItem from="1585448420221" duration="2532000" />
-      <workItem from="1585779769228" duration="1815000" />
-      <workItem from="1585830684851" duration="998000" />
-      <workItem from="1586390957455" duration="13072000" />
-      <workItem from="1586458925655" duration="30112000" />
-      <workItem from="1586579480811" duration="3431000" />
-      <workItem from="1586656532182" duration="3089000" />
-      <workItem from="1586660395449" duration="25229000" />
-      <workItem from="1586787988838" duration="5810000" />
-      <workItem from="1587071808923" duration="653000" />
-      <workItem from="1587091421993" duration="3070000" />
-      <workItem from="1587095408986" duration="15094000" />
-      <workItem from="1587150057863" duration="143000" />
-      <workItem from="1587219896144" duration="7036000" />
-      <workItem from="1587228288337" duration="4210000" />
-      <workItem from="1587316513598" duration="199000" />
-      <workItem from="1587316717008" duration="9733000" />
-      <workItem from="1587672185969" duration="9317000" />
-      <workItem from="1587696132882" duration="12515000" />
-      <workItem from="1587759599246" duration="1246000" />
-      <workItem from="1587839997196" duration="228000" />
-      <workItem from="1588092191346" duration="1250000" />
-      <workItem from="1588095884845" duration="250000" />
-      <workItem from="1588102026900" duration="7380000" />
-      <workItem from="1588117043431" duration="619000" />
-      <workItem from="1588175201539" duration="2907000" />
-      <workItem from="1588264857871" duration="726000" />
-      <workItem from="1588549609227" duration="26000" />
+      <updated>1589324300894</updated>
+      <workItem from="1589324307296" duration="623000" />
+      <workItem from="1589838835021" duration="268000" />
     </task>
     <servers />
   </component>
@@ -118,67 +37,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="240" y="67" key="#ESLint" timestamp="1584219129367">
+    <state x="295" y="164" width="689" height="472" key="find.popup" timestamp="1589324474306">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="67" key="#ESLint/0.0.1280.800@0.0.1280.800" timestamp="1584219129367" />
-    <state x="378" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584730100451">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="378" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1584730100450" />
-    <state x="212" y="195" key="EditFileWatcherDialog" timestamp="1584728758284">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="212" y="195" key="EditFileWatcherDialog/0.0.1280.800@0.0.1280.800" timestamp="1584728758284" />
-    <state width="1259" height="212" key="GridCell.Tab.0.bottom" timestamp="1587222838300">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="1259" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1587222838300" />
-    <state width="1259" height="212" key="GridCell.Tab.0.center" timestamp="1587222838298">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="1259" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1587222838298" />
-    <state width="1259" height="212" key="GridCell.Tab.0.left" timestamp="1587222838297">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="1259" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1587222838297" />
-    <state width="1259" height="212" key="GridCell.Tab.0.right" timestamp="1587222838299">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="1259" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1587222838299" />
-    <state x="141" y="23" width="997" height="709" key="SettingsEditor" timestamp="1586660176060">
-      <screen x="0" y="23" width="1280" height="709" />
-    </state>
-    <state x="141" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1584728755780" />
-    <state x="141" y="23" width="997" height="709" key="SettingsEditor/0.23.1280.709@0.23.1280.709" timestamp="1586660176060" />
-    <state x="297" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585020677898">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="297" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1585020677898" />
-    <state x="295" y="164" width="689" height="472" key="find.popup" timestamp="1588181450529">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="295" y="164" width="689" height="472" key="find.popup/0.0.1280.800/-1366.-255.1366.768@0.0.1280.800" timestamp="1585780184904" />
-    <state x="295" y="164" width="689" height="472" key="find.popup/0.0.1280.800/1280.-476.1366.768@0.0.1280.800" timestamp="1587705156220" />
-    <state x="295" y="164" width="689" height="472" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1588181450529" />
-    <state x="305" y="185" key="run.anything.popup" timestamp="1584380018539">
-      <screen x="0" y="23" width="1280" height="709" />
-    </state>
-    <state x="305" y="185" key="run.anything.popup/0.23.1280.709@0.23.1280.709" timestamp="1584380018539" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1588106906833">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800/1280.-476.1366.768@0.0.1280.800" timestamp="1587704778657" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1588106906833" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Nosotros.vue</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="295" y="164" width="689" height="472" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1589324474306" />
   </component>
 </project>
