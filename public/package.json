@@ -13,7 +13,7 @@
     "core-js": "^3.6.4",
     "firebase": "^7.11.0",
     "gtoken": "^5.0.1",
-    "nodemailer": "^6.4.6",
+    "nodemailer": "^6.4.16",
     "roboto-fontface": "*",
     "typeface-montserrat": "^0.0.75",
     "vue": "^2.6.11",
